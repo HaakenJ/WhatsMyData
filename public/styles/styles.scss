@@ -1,26 +1,123 @@
 $light-base: #00A8E8;
 $mid-base: #007EA7;
-$dark-base: #003459;
-$darkest: #00171F;
-$textPrimary: #FFFFFF;
-$header-font: 'Share Tech Mono', monospace;
+$primary: #073dd2;
+$secondary: #D29C07;
+$light-bg: #E7E9FB;
+$dark-text: #00171F;
+$header-font: 'Share Tech Mono',
+monospace;
+
+body {
+    height: 2000px;
+}
 
 .banner {
-    background-color: $dark-base;
+    background-color: $primary;
 }
 
 nav {
-    background-color: $dark-base;
+    background-color: $primary;
 }
 
 .logo {
-    color: $textPrimary;
+    color: #FFFFFF;
+    font-family: $header-font;
+}
+
+.header {
+    font-family: $header-font;
+}
+
+@media only screen and (min-width: 1024px) {
+    .banner {
+        height: 450px;
+        background-image: url("../images/data-center.png");
+    }
+
+    .logo-container {
+        position: relative;
+        top: 100px;
+        text-align: center;
+        text-shadow: 2px 5px 5px gray;
+    }
+
+    .logo {
+        font-size: 10rem;
+        font-family: $header-font;
+    }
+
+    #logo-what {
+        position: relative;
+        bottom: 100px;
+    }
+
+    #logo-data {
+        position: relative;
+        top: 130px;
+    }
+
+    .description {
+        font-family: $header-font;
+        color: $dark-text;
+        font-size: 3rem;
+        margin: 0 auto;
+        text-align: center;
+        width: 50%;
+        font-weight: 600;
+        margin-top: 30px;
+    }
+
+    .card-title {
+        font-size: 2rem;
+        font-weight: 600;
+    }
+
+    .card-desc {
+        font-weight: 500;
+    }
+
+    .data {
+        font-weight: 400;
+    }
+
+    .hardware-container {
+        width: 900px;
+        position: absolute;
+        left: 15%;
+        margin-top: 75px;
+    }
+
+    .hardware-shadow {
+        background-color: $primary;
+        height: 240px;
+        width: 350px;
+        position: absolute;
+        z-index: -1;
+        left: -25px;
+        top: -15px;
+        box-shadow: 1px 4px 4px grey;
+    }
+
+    .hardware-content {
+        width: 300px;
+        box-shadow: 2px 5px 5px gray;
+        padding: 25px;
+        line-height: 2;
+        background-color: #FFFFFF;
+    }
+
+    .hardware-about {
+        position: absolute;
+        top: 33px;
+        left: 375px;
+    }
 }
 
 @media only screen and (max-width: 1023px) {
     nav {
         height: 100px;
     }
+
     .banner {
         height: 900px;
     }
@@ -53,6 +150,14 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
+    nav {
+        height: 56px;
+    }
+
+    .brand-logo {
+        left: 39% !important;
+    }
+
     .banner {
         height: 500px;
     }
@@ -64,7 +169,6 @@ nav {
 
     .logo {
         font-size: 6rem;
-        font-family: $header-font;
     }
 
     #logo-what {
@@ -82,4 +186,3 @@ nav {
         left: 75px;
     }
 }
-

@@ -1,13 +1,97 @@
+body {
+  height: 2000px;
+}
+
 .banner {
-  background-color: #003459;
+  background-color: #073dd2;
 }
 
 nav {
-  background-color: #003459;
+  background-color: #073dd2;
 }
 
 .logo {
   color: #FFFFFF;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.header {
+  font-family: "Share Tech Mono", monospace;
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner {
+    height: 450px;
+    background-image: url("../images/data-center.png");
+  }
+  .logo-container {
+    position: relative;
+    top: 100px;
+    text-align: center;
+    text-shadow: 2px 5px 5px gray;
+  }
+  .logo {
+    font-size: 10rem;
+    font-family: "Share Tech Mono", monospace;
+  }
+  #logo-what {
+    position: relative;
+    bottom: 100px;
+  }
+  #logo-data {
+    position: relative;
+    top: 130px;
+  }
+  .description {
+    font-family: "Share Tech Mono", monospace;
+    color: #00171F;
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 50%;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  .card-title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .card-desc {
+    font-weight: 500;
+  }
+  .data {
+    font-weight: 400;
+  }
+  .hardware-container {
+    width: 900px;
+    position: absolute;
+    left: 15%;
+    margin-top: 75px;
+  }
+  .hardware-shadow {
+    background-color: #073dd2;
+    height: 240px;
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+    left: -25px;
+    top: -15px;
+    -webkit-box-shadow: 1px 4px 4px grey;
+            box-shadow: 1px 4px 4px grey;
+  }
+  .hardware-content {
+    width: 300px;
+    -webkit-box-shadow: 2px 5px 5px gray;
+            box-shadow: 2px 5px 5px gray;
+    padding: 25px;
+    line-height: 2;
+    background-color: #FFFFFF;
+  }
+  .hardware-about {
+    position: absolute;
+    top: 33px;
+    left: 375px;
+  }
 }
 
 @media only screen and (max-width: 1023px) {
@@ -41,6 +125,12 @@ nav {
 }
 
 @media only screen and (max-width: 767px) {
+  nav {
+    height: 56px;
+  }
+  .brand-logo {
+    left: 39% !important;
+  }
   .banner {
     height: 500px;
   }
@@ -50,7 +140,6 @@ nav {
   }
   .logo {
     font-size: 6rem;
-    font-family: "Share Tech Mono", monospace;
   }
   #logo-what {
     position: relative;
