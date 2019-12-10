@@ -41,9 +41,9 @@
         What does every website know about you and how can they use it?
     </div>
 
-    <div class="hardware-container">
-        <div class="hardware-shadow"></div>
-        <div class="hardware-content">
+    <div class="data-container">
+        <div class="card-shadow"></div>
+        <div class="card-content">
             <div class="card-title header">Your Hardware:</div>
             <div class="card-desc">Your Device Type: <span class="data" id="device-type"></span></div>
             <div class="card-desc">Your Device Vendor: <span class="data" id="device-vendor"></span></div>
@@ -53,14 +53,39 @@
             <div class="card-desc">Is your battery charging? <span class="data" id="battery-charging"></span></div>
             <div class="card-desc">Your Current Battery Level: <span class="data" id="battery-level"></span></div>
         </div>
-        <div class="hardware-about">
+        <div class="card-about">
             <div class="card-title header">Is This Dangerous?</div>
             <p class="explaination">
                 Not really, a website could use this data to help create a digital fingerprint of you
-                but for the most part it is only used to optimize what content they show you based on the speed and and memory
+                but for the most part it is only used to optimize what content they show you based on the speed and and
+                memory
                 capabilites of your computer.
             </p>
         </div>
+    </div>
+
+    <div class="data-container">
+        <div class="card-about" id="software-exp">
+            <div class="card-title header">Is This Dangerous?</div>
+            <p class="explaination">
+                Not really, a website could use this data to help create a digital fingerprint of you
+                but for the most part it is only used to optimize what content they show you based on the speed and and
+                memory
+                capabilites of your computer.
+            </p>
+        </div>
+        <div class="card-shadow" id="software-shadow"></div>
+        <div class="card-content" id="software-card">
+            <div class="card-title header">Your Software:</div>
+            <div class="card-desc">Your Device Type: <span class="data" id="device-type"></span></div>
+            <div class="card-desc">Your Device Vendor: <span class="data" id="device-vendor"></span></div>
+            <div class="card-desc">Your Device Model: <span class="data" id="device-model"></span></div>
+            <div class="card-desc">Your CPU: <span class="data" id="cpu"></span></div>
+            <div class="card-desc">Number of Cores: <span class="data" id="cores"></span></div>
+            <div class="card-desc">Is your battery charging? <span class="data" id="battery-charging"></span></div>
+            <div class="card-desc">Your Current Battery Level: <span class="data" id="battery-level"></span></div>
+        </div>
+
     </div>
 
     <!-- jQuery -->

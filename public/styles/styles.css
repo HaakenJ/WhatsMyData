@@ -62,13 +62,13 @@ nav {
   .data {
     font-weight: 400;
   }
-  .hardware-container {
+  .data-container {
     width: 900px;
-    position: absolute;
+    position: relative;
     left: 15%;
     margin-top: 75px;
   }
-  .hardware-shadow {
+  .card-shadow {
     background-color: #073dd2;
     height: 240px;
     width: 350px;
@@ -79,7 +79,7 @@ nav {
     -webkit-box-shadow: 1px 4px 4px grey;
             box-shadow: 1px 4px 4px grey;
   }
-  .hardware-content {
+  .card-content {
     width: 300px;
     -webkit-box-shadow: 2px 5px 5px gray;
             box-shadow: 2px 5px 5px gray;
@@ -87,10 +87,21 @@ nav {
     line-height: 2;
     background-color: #FFFFFF;
   }
-  .hardware-about {
+  .card-about {
     position: absolute;
     top: 33px;
     left: 375px;
+  }
+  #software-shadow {
+    left: 500px;
+  }
+  #software-card {
+    position: relative;
+    left: 525px;
+  }
+  #software-exp {
+    left: 0;
+    width: 475px;
   }
 }
 
