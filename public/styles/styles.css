@@ -1,3 +1,68 @@
-.list-group-item {
-  line-height: 2.5;
+.banner {
+  background-color: #003459;
 }
+
+nav {
+  background-color: #003459;
+}
+
+.logo {
+  color: #FFFFFF;
+}
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    height: 100px;
+  }
+  .banner {
+    height: 900px;
+  }
+  .logo-container {
+    position: relative;
+    top: 100px;
+  }
+  .logo {
+    font-size: 10rem;
+    font-family: "Share Tech Mono", monospace;
+    display: block;
+  }
+  #logo-what {
+    position: relative;
+    left: 60px;
+  }
+  #logo-my {
+    position: relative;
+    left: 180px;
+  }
+  #logo-data {
+    position: relative;
+    left: 240px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .banner {
+    height: 500px;
+  }
+  .logo-container {
+    position: relative;
+    top: 30px;
+  }
+  .logo {
+    font-size: 6rem;
+    font-family: "Share Tech Mono", monospace;
+  }
+  #logo-what {
+    position: relative;
+    left: 15px;
+  }
+  #logo-my {
+    position: relative;
+    left: 60px;
+  }
+  #logo-data {
+    position: relative;
+    left: 75px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,85 @@
+$light-base: #00A8E8;
+$mid-base: #007EA7;
+$dark-base: #003459;
+$darkest: #00171F;
+$textPrimary: #FFFFFF;
+$header-font: 'Share Tech Mono', monospace;
+
+.banner {
+    background-color: $dark-base;
+}
+
+nav {
+    background-color: $dark-base;
+}
+
+.logo {
+    color: $textPrimary;
+}
+
+@media only screen and (max-width: 1023px) {
+    nav {
+        height: 100px;
+    }
+    .banner {
+        height: 900px;
+    }
+
+    .logo-container {
+        position: relative;
+        top: 100px;
+    }
+
+    .logo {
+        font-size: 10rem;
+        font-family: $header-font;
+        display: block;
+    }
+
+    #logo-what {
+        position: relative;
+        left: 60px;
+    }
+
+    #logo-my {
+        position: relative;
+        left: 180px;
+    }
+
+    #logo-data {
+        position: relative;
+        left: 240px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .banner {
+        height: 500px;
+    }
+
+    .logo-container {
+        position: relative;
+        top: 30px;
+    }
+
+    .logo {
+        font-size: 6rem;
+        font-family: $header-font;
+    }
+
+    #logo-what {
+        position: relative;
+        left: 15px;
+    }
+
+    #logo-my {
+        position: relative;
+        left: 60px;
+    }
+
+    #logo-data {
+        position: relative;
+        left: 75px;
+    }
+}
+
