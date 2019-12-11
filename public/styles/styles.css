@@ -1,3 +1,205 @@
-.list-group-item {
-  line-height: 2.5;
+body {
+  height: 3000px;
+  color: #00171F;
 }
+
+.banner {
+  background-color: #073dd2;
+}
+
+nav {
+  background-color: #073dd2;
+}
+
+.logo {
+  color: #FFFFFF;
+  font-family: "Share Tech Mono", monospace;
+}
+
+.header {
+  font-family: "Share Tech Mono", monospace;
+  text-shadow: 1px 2px 2px #afafaf;
+}
+
+@media only screen and (min-width: 1024px) {
+  .banner {
+    height: 500px;
+    background-image: url("../images/data-center.png");
+  }
+  .logo-container {
+    position: relative;
+    top: 100px;
+    text-shadow: 2px 5px 5px gray;
+  }
+  .logo {
+    font-size: 10rem;
+    font-family: "Share Tech Mono", monospace;
+  }
+  #logo-what {
+    position: absolute;
+    top: -130px;
+    left: 17%;
+  }
+  #logo-my {
+    position: absolute;
+    left: 45%;
+  }
+  #logo-data {
+    position: absolute;
+    top: 135px;
+    left: 47%;
+  }
+  .description {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 3rem;
+    margin: 0 auto;
+    text-align: center;
+    width: 80%;
+    font-weight: 600;
+    margin-top: 30px;
+  }
+  .data-container {
+    width: 900px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
+  }
+  .card-title {
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .card-desc {
+    font-weight: 500;
+  }
+  .data {
+    font-weight: 400;
+  }
+  .card-shadow {
+    background-color: #073dd2;
+    height: 240px;
+    width: 350px;
+    position: absolute;
+    z-index: -1;
+    left: -25px;
+    top: -15px;
+    -webkit-box-shadow: 1px 4px 4px grey;
+            box-shadow: 1px 4px 4px grey;
+  }
+  .card-content {
+    width: 300px;
+    -webkit-box-shadow: 2px 5px 5px gray;
+            box-shadow: 2px 5px 5px gray;
+    padding: 25px;
+    line-height: 2;
+    background-color: #FFFFFF;
+  }
+  .card-about {
+    position: absolute;
+    top: 33px;
+    left: 375px;
+    width: 475px;
+  }
+  #software-shadow {
+    left: 500px;
+  }
+  #software-card {
+    position: relative;
+    left: 525px;
+  }
+  #software-exp {
+    left: 0;
+  }
+  #plugins {
+    padding-left: 20px;
+    margin-top: 0;
+  }
+  .plugin-name {
+    list-style-type: circle !important;
+  }
+  .learn-more {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.7rem;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
+  .link-btn {
+    background-color: #d29c07;
+    font-family: "Share Tech Mono", monospace;
+    display: block;
+  }
+  .link-btn:hover {
+    background-color: #d4db32;
+  }
+  #user-agent-exp {
+    margin-top: 20px;
+    position: absolute;
+    left: 250px;
+  }
+  #user-agent-spoof {
+    margin-top: 20px;
+    position: absolute;
+    right: 250px;
+  }
+}
+
+@media only screen and (max-width: 1023px) {
+  nav {
+    height: 100px;
+  }
+  .banner {
+    height: 900px;
+  }
+  .logo-container {
+    position: relative;
+    top: 100px;
+  }
+  .logo {
+    font-size: 10rem;
+    font-family: "Share Tech Mono", monospace;
+    display: block;
+  }
+  #logo-what {
+    position: relative;
+    left: 60px;
+  }
+  #logo-my {
+    position: relative;
+    left: 180px;
+  }
+  #logo-data {
+    position: relative;
+    left: 240px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  nav {
+    height: 56px;
+  }
+  .brand-logo {
+    left: 39% !important;
+  }
+  .banner {
+    height: 500px;
+  }
+  .logo-container {
+    position: relative;
+    top: 30px;
+  }
+  .logo {
+    font-size: 6rem;
+  }
+  #logo-what {
+    position: relative;
+    left: 15px;
+  }
+  #logo-my {
+    position: relative;
+    left: 60px;
+  }
+  #logo-data {
+    position: relative;
+    left: 75px;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
