@@ -21,7 +21,7 @@ nav {
   text-shadow: 1px 2px 2px #afafaf;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 0px) {
   .banner {
     height: 500px;
     background-image: url("../images/data-center.png");
@@ -139,67 +139,6 @@ nav {
     margin-top: 20px;
     position: absolute;
     right: 250px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  nav {
-    height: 100px;
-  }
-  .banner {
-    height: 900px;
-  }
-  .logo-container {
-    position: relative;
-    top: 100px;
-  }
-  .logo {
-    font-size: 10rem;
-    font-family: "Share Tech Mono", monospace;
-    display: block;
-  }
-  #logo-what {
-    position: relative;
-    left: 60px;
-  }
-  #logo-my {
-    position: relative;
-    left: 180px;
-  }
-  #logo-data {
-    position: relative;
-    left: 240px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  nav {
-    height: 56px;
-  }
-  .brand-logo {
-    left: 39% !important;
-  }
-  .banner {
-    height: 500px;
-  }
-  .logo-container {
-    position: relative;
-    top: 30px;
-  }
-  .logo {
-    font-size: 6rem;
-  }
-  #logo-what {
-    position: relative;
-    left: 15px;
-  }
-  #logo-my {
-    position: relative;
-    left: 60px;
-  }
-  #logo-data {
-    position: relative;
-    left: 75px;
   }
 }
 /*# sourceMappingURL=styles.css.map */
