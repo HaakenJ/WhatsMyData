@@ -37,7 +37,6 @@ nav {
     .logo-container {
         position: relative;
         top: 100px;
-        text-align: center;
         text-shadow: 2px 5px 5px gray;
     }
 
@@ -47,13 +46,20 @@ nav {
     }
 
     #logo-what {
-        position: relative;
-        bottom: 100px;
+        position: absolute;
+        top: -130px;
+        left: 17%;
+    }
+
+    #logo-my {
+        position: absolute;
+        left: 45%;
     }
 
     #logo-data {
-        position: relative;
-        top: 130px;
+        position: absolute;
+        top: 135px;
+        left: 47%;
     }
 
     .description {
@@ -83,7 +89,7 @@ nav {
     .data-container {
         width: 900px;
         position: relative;
-        left: 15%;
+        margin: 0 auto;
         margin-top: 75px;
     }
 
@@ -110,6 +116,7 @@ nav {
         position: absolute;
         top: 33px;
         left: 375px;
+        width: 475px;
     }
 
     #software-shadow {
@@ -123,7 +130,6 @@ nav {
 
     #software-exp {
         left: 0;
-        width: 475px;
     }
 }
 
