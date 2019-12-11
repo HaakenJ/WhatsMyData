@@ -6,7 +6,7 @@ $(document).ready(() => {
         browser = parser.getBrowser();
 
     if (device.type === undefined) {
-        $("#device-type").text("Desktop PC");
+        $("#device-type").text("PC");
         $("#device-vendor").text("Not available");
         $("#device-model").text("Not available");
     } else {
