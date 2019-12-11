@@ -2,6 +2,7 @@ $(document).ready(() => {
     const parser = new UAParser();
     const device = parser.getDevice();
     const cpu = parser.getCPU();
+    const os = parser.getOS();
 
     if (device.type === undefined) {
         $("#device-type").text("Desktop PC");
@@ -16,6 +17,8 @@ $(document).ready(() => {
     $("#cores").text(navigator.hardwareConcurrency);
     navigator.getBattery().then((battery) => {
         $("#battery-charging").text(battery.charging ? "Yes" : "No");
-        $("#battery-level").text(battery.level * 100 + "%");
-    })
+        $("#battery-level").text(`${battery.level * 100}%`);
+    });
+
+    $("#op-sys").text(`${os.name} ${os.version}`);
 });
