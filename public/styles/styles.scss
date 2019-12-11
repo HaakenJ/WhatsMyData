@@ -1,14 +1,15 @@
 $light-base: #00A8E8;
 $mid-base: #007EA7;
 $primary: #073dd2;
-$secondary: #D29C07;
+$secondary: #d29c07;
 $light-bg: #E7E9FB;
 $dark-text: #00171F;
 $header-font: 'Share Tech Mono',
 monospace;
 
 body {
-    height: 2000px;
+    height: 3000px;
+    color: $dark-text;
 }
 
 .banner {
@@ -26,11 +27,12 @@ nav {
 
 .header {
     font-family: $header-font;
+    text-shadow: 1px 2px 2px rgb(175, 175, 175);
 }
 
 @media only screen and (min-width: 1024px) {
     .banner {
-        height: 450px;
+        height: 500px;
         background-image: url("../images/data-center.png");
     }
 
@@ -64,13 +66,19 @@ nav {
 
     .description {
         font-family: $header-font;
-        color: $dark-text;
         font-size: 3rem;
         margin: 0 auto;
         text-align: center;
-        width: 50%;
+        width: 80%;
         font-weight: 600;
         margin-top: 30px;
+    }
+
+    .data-container {
+        width: 900px;
+        position: relative;
+        margin: 0 auto;
+        margin-top: 200px;
     }
 
     .card-title {
@@ -84,13 +92,6 @@ nav {
 
     .data {
         font-weight: 400;
-    }
-
-    .data-container {
-        width: 900px;
-        position: relative;
-        margin: 0 auto;
-        margin-top: 75px;
     }
 
     .card-shadow {
@@ -130,6 +131,43 @@ nav {
 
     #software-exp {
         left: 0;
+    }
+
+    #plugins {
+        padding-left: 20px;
+        margin-top: 0;
+    }
+
+    .plugin-name {
+        list-style-type: circle !important;
+    }
+
+    .learn-more {
+        font-family: $header-font;
+        font-size: 1.7rem;
+        margin: 0 auto;
+        margin-top: 150px;
+    }
+
+    .link-btn {
+        background-color: $secondary;
+        font-family: $header-font;
+        display: block;
+    }
+    .link-btn:hover {
+        background-color: #d4db32;
+    }
+
+    #user-agent-exp {
+        margin-top: 20px;
+        position: absolute;
+        left: 250px;
+    }
+
+    #user-agent-spoof {
+        margin-top: 20px;
+        position: absolute;
+        right: 250px;
     }
 }
 

@@ -1,5 +1,6 @@
 body {
-  height: 2000px;
+  height: 3000px;
+  color: #00171F;
 }
 
 .banner {
@@ -17,11 +18,12 @@ nav {
 
 .header {
   font-family: "Share Tech Mono", monospace;
+  text-shadow: 1px 2px 2px #afafaf;
 }
 
 @media only screen and (min-width: 1024px) {
   .banner {
-    height: 450px;
+    height: 500px;
     background-image: url("../images/data-center.png");
   }
   .logo-container {
@@ -49,13 +51,18 @@ nav {
   }
   .description {
     font-family: "Share Tech Mono", monospace;
-    color: #00171F;
     font-size: 3rem;
     margin: 0 auto;
     text-align: center;
-    width: 50%;
+    width: 80%;
     font-weight: 600;
     margin-top: 30px;
+  }
+  .data-container {
+    width: 900px;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 200px;
   }
   .card-title {
     font-size: 2rem;
@@ -66,12 +73,6 @@ nav {
   }
   .data {
     font-weight: 400;
-  }
-  .data-container {
-    width: 900px;
-    position: relative;
-    margin: 0 auto;
-    margin-top: 75px;
   }
   .card-shadow {
     background-color: #073dd2;
@@ -107,6 +108,37 @@ nav {
   }
   #software-exp {
     left: 0;
+  }
+  #plugins {
+    padding-left: 20px;
+    margin-top: 0;
+  }
+  .plugin-name {
+    list-style-type: circle !important;
+  }
+  .learn-more {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 1.7rem;
+    margin: 0 auto;
+    margin-top: 150px;
+  }
+  .link-btn {
+    background-color: #d29c07;
+    font-family: "Share Tech Mono", monospace;
+    display: block;
+  }
+  .link-btn:hover {
+    background-color: #d4db32;
+  }
+  #user-agent-exp {
+    margin-top: 20px;
+    position: absolute;
+    left: 250px;
+  }
+  #user-agent-spoof {
+    margin-top: 20px;
+    position: absolute;
+    right: 250px;
   }
 }
 

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>What's My Data?</title>
     <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <!-- Stylesheet -->
@@ -68,24 +68,34 @@
         <div class="card-about" id="software-exp">
             <div class="card-title header">What is this data used for?</div>
             <p class="explaination">
-                Not really, a website could use this data to help create a digital fingerprint of you
-                but for the most part it is only used to optimize what content they show you based on the speed and and
-                memory
-                capabilites of your computer.
+                This data is generally nothing to worry about.  In fact, 
+                without it many websites may not work because certain 
+                aspects of the site may be operating system, browser 
+                and browser version specific.
             </p>
         </div>
         <div class="card-shadow" id="software-shadow"></div>
         <div class="card-content" id="software-card">
             <div class="card-title header">Your Software:</div>
-            <div class="card-desc">Operating System: 
-                <span class="data" id="op-sys-name"></span>
-                <span class="data" id="op-sys-ver"></span>
-            </div>
+            <div class="card-desc">Operating System: <span class="data" id="op-sys"></span></div>
             <div class="card-desc">Browser: <span class="data" id="browser"></span></div>
-            <div class="card-desc">Browser Plugins: <span class="data" id="plugins"></span></div>
+            <div class="card-desc">Browser Plugins:<ul class="data" id="plugins"></ul></div>
         </div>
-
     </div>
+
+    <div class="learn-more description">
+        Hardware and software data is collected from the user agent string that 
+        your brower sends every time you make a request to a website.  If you 
+        would like to learn more about user agent strings (and even how you 
+        can spoof them!) visit the links below.
+        <a class="btn waves-effect waves-light link-btn" id="user-agent-exp" href="https://blog.malwarebytes.com/security-world/technology/2017/08/explained-user-agent/">
+            Explained: user agent
+        </a>
+        <a class="btn waves-effect waves-light link-btn" id="user-agent-spoof" href="https://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/">
+            Spoof your user agent
+        </a>
+    </div>
+    
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
