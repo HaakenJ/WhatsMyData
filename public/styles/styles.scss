@@ -27,7 +27,7 @@ nav {
 
 .header {
     font-family: $header-font;
-    text-shadow: 1px 2px 2px rgb(175, 175, 175);
+    text-shadow: 1px 1px 1px rgb(175, 175, 175);
 }
 
 @media only screen and (min-width: 0px) {
@@ -75,9 +75,7 @@ nav {
     }
 
     .data-container {
-        width: 900px;
         position: relative;
-        margin: 0 auto;
         margin-top: 200px;
     }
 
@@ -98,39 +96,36 @@ nav {
         background-color: $primary;
         height: 240px;
         width: 350px;
-        position: absolute;
         z-index: -1;
-        left: -25px;
+    }
+
+    #hardware-shadow {
+        position: absolute;
         top: -15px;
-        box-shadow: 1px 4px 4px grey;
+        left: -15px;
     }
 
     .card-content {
         width: 300px;
-        box-shadow: 2px 5px 5px gray;
         padding: 25px;
         line-height: 2;
         background-color: #FFFFFF;
     }
 
     .card-about {
-        position: absolute;
+        position: relative;
         top: 33px;
-        left: 375px;
-        width: 475px;
     }
 
     #software-shadow {
-        left: 500px;
+        position: absolute;
+        top: -15px;
+        right: -55px;
     }
 
     #software-card {
-        position: relative;
-        left: 525px;
-    }
-
-    #software-exp {
-        left: 0;
+        position: absolute;
+        right: -33px;
     }
 
     #plugins {
@@ -142,11 +137,13 @@ nav {
         list-style-type: circle !important;
     }
 
+    .top-margin {
+        margin-top: 250px
+    }
+
     .learn-more {
         font-family: $header-font;
         font-size: 1.7rem;
-        margin: 0 auto;
-        margin-top: 150px;
     }
 
     .link-btn {
@@ -160,14 +157,10 @@ nav {
 
     #user-agent-exp {
         margin-top: 20px;
-        position: absolute;
-        left: 250px;
     }
 
     #user-agent-spoof {
         margin-top: 20px;
-        position: absolute;
-        right: 250px;
     }
 }
 
