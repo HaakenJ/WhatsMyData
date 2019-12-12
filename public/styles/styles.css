@@ -18,10 +18,10 @@ nav {
 
 .header {
   font-family: "Share Tech Mono", monospace;
-  text-shadow: 1px 2px 2px #afafaf;
+  text-shadow: 1px 1px 1px #afafaf;
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 0px) {
   .banner {
     height: 500px;
     background-image: url("../images/data-center.png");
@@ -59,9 +59,7 @@ nav {
     margin-top: 30px;
   }
   .data-container {
-    width: 900px;
     position: relative;
-    margin: 0 auto;
     margin-top: 200px;
   }
   .card-title {
@@ -78,36 +76,31 @@ nav {
     background-color: #073dd2;
     height: 240px;
     width: 350px;
-    position: absolute;
     z-index: -1;
-    left: -25px;
+  }
+  #hardware-shadow {
+    position: absolute;
     top: -15px;
-    -webkit-box-shadow: 1px 4px 4px grey;
-            box-shadow: 1px 4px 4px grey;
+    left: -15px;
   }
   .card-content {
     width: 300px;
-    -webkit-box-shadow: 2px 5px 5px gray;
-            box-shadow: 2px 5px 5px gray;
     padding: 25px;
     line-height: 2;
     background-color: #FFFFFF;
   }
   .card-about {
-    position: absolute;
+    position: relative;
     top: 33px;
-    left: 375px;
-    width: 475px;
   }
   #software-shadow {
-    left: 500px;
+    position: absolute;
+    top: -15px;
+    right: -55px;
   }
   #software-card {
-    position: relative;
-    left: 525px;
-  }
-  #software-exp {
-    left: 0;
+    position: absolute;
+    right: -33px;
   }
   #plugins {
     padding-left: 20px;
@@ -116,11 +109,12 @@ nav {
   .plugin-name {
     list-style-type: circle !important;
   }
+  .top-margin {
+    margin-top: 250px;
+  }
   .learn-more {
     font-family: "Share Tech Mono", monospace;
     font-size: 1.7rem;
-    margin: 0 auto;
-    margin-top: 150px;
   }
   .link-btn {
     background-color: #d29c07;
@@ -132,74 +126,9 @@ nav {
   }
   #user-agent-exp {
     margin-top: 20px;
-    position: absolute;
-    left: 250px;
   }
   #user-agent-spoof {
     margin-top: 20px;
-    position: absolute;
-    right: 250px;
-  }
-}
-
-@media only screen and (max-width: 1023px) {
-  nav {
-    height: 100px;
-  }
-  .banner {
-    height: 900px;
-  }
-  .logo-container {
-    position: relative;
-    top: 100px;
-  }
-  .logo {
-    font-size: 10rem;
-    font-family: "Share Tech Mono", monospace;
-    display: block;
-  }
-  #logo-what {
-    position: relative;
-    left: 60px;
-  }
-  #logo-my {
-    position: relative;
-    left: 180px;
-  }
-  #logo-data {
-    position: relative;
-    left: 240px;
-  }
-}
-
-@media only screen and (max-width: 767px) {
-  nav {
-    height: 56px;
-  }
-  .brand-logo {
-    left: 39% !important;
-  }
-  .banner {
-    height: 500px;
-  }
-  .logo-container {
-    position: relative;
-    top: 30px;
-  }
-  .logo {
-    font-size: 6rem;
-  }
-  #logo-what {
-    position: relative;
-    left: 15px;
-  }
-  #logo-my {
-    position: relative;
-    left: 60px;
-  }
-  #logo-data {
-    position: relative;
-    left: 75px;
   }
 }
 /*# sourceMappingURL=styles.css.map */

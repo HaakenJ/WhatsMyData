@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>What's My Data?</title>
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#!" class="brand-logo">Logo</a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Github</a></li>
+                    <li><a href="badges.html">Components</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="banner z-depth-2">
+        <div class="logo-container">
+            <span class="logo" id="logo-what">What's</span>
+            <span class="logo" id="logo-my">My</span>
+            <span class="logo" id="logo-data">Data?</span>
+        </div>
+    </div>
+
+    <div class="description">
+        What does every website know about you and how can they use it?
+    </div>
+
+
+    <div class="container">
+        <div class="data-container row">
+            <div class="col s4">
+                <div class="card-shadow z-depth-4" id="hardware-shadow"></div>
+                <div class="card-content z-depth-4">
+                    <div class="card-title header">Your Hardware:</div>
+                    <div class="card-desc">Your Device Type: <span class="data" id="device-type"></span></div>
+                    <div class="card-desc">Your Device Vendor: <span class="data" id="device-vendor"></span></div>
+                    <div class="card-desc">Your Device Model: <span class="data" id="device-model"></span></div>
+                    <div class="card-desc">Your CPU: <span class="data" id="cpu"></span></div>
+                    <div class="card-desc">Number of Cores: <span class="data" id="cores"></span></div>
+                    <div class="card-desc">Is your battery charging? <span class="data" id="battery-charging"></span>
+                    </div>
+                    <div class="card-desc">Your Current Battery Level: <span class="data" id="battery-level"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col s6 offset-s2">
+                <div class="card-about">
+                    <div class="card-title header">Is This Dangerous?</div>
+                    <p class="explaination">
+                        Not really, a website could use this data to help create a digital fingerprint of you
+                        but for the most part it is only used to optimize what content they show you based on the speed
+                        and
+                        and
+                        memory
+                        capabilites of your computer.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="data-container row">
+            <div class="col s6">
+                <div class="card-about">
+                    <div class="card-title header">What is this data used for?</div>
+                    <p class="explaination">
+                        This data is generally nothing to worry about. In fact,
+                        without it many websites may not work because certain
+                        aspects of the site may be operating system, browser
+                        and browser version specific.
+                    </p>
+                </div>
+            </div>
+            <div class="col s4 offset-s2">
+                <div class="card-shadow z-depth-4" id="software-shadow"></div>
+                <div class="card-content z-depth-4" id="software-card">
+                    <div class="card-title header">Your Software:</div>
+                    <div class="card-desc">Operating System: <span class="data" id="op-sys"></span></div>
+                    <div class="card-desc">Browser: <span class="data" id="browser"></span></div>
+                    <div class="card-desc">Browser Plugins:<ul class="data" id="plugins"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row top-margin">
+            <div class="learn-more description col s12">
+                Hardware and software data is collected from the user agent string that
+                your brower sends every time you make a request to a website. If you
+                would like to learn more about user agent strings (and even how you
+                can spoof them!) visit the links below.
+                <div class="row">
+                    <div class="col s4 offset-s1">
+                        <a class="btn waves-effect waves-light link-btn" id="user-agent-exp"
+                            href="https://blog.malwarebytes.com/security-world/technology/2017/08/explained-user-agent/">
+                            Explained: user agent
+                        </a>
+                    </div>
+                    <div class="col s4 offset-s2">
+                        <a class="btn waves-effect waves-light link-btn" id="user-agent-spoof"
+                            href="https://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/">
+                            Spoof your user agent
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <!-- ua-parser-js -->
+    <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
+    <!-- Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Anime.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!-- ua-parser code -->
+    <script src="js/ua-parser.js"></script>
+</body>
+
+</html>
