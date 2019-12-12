@@ -131,4 +131,38 @@ nav {
     margin-top: 20px;
   }
 }
+
+@media only screen and (min-width: 1250px) {
+  .card-title {
+    font-size: 2.5rem;
+    font-weight: 600;
+  }
+  .card-desc {
+    font-size: 1.25rem;
+  }
+  .card-shadow {
+    background-color: #073dd2;
+    height: 260px;
+    width: 440px;
+    z-index: -1;
+  }
+  #hardware-shadow {
+    position: absolute;
+    top: -20px;
+    left: -15px;
+  }
+  .card-content {
+    width: 387px;
+    height: 400px;
+    padding: 25px;
+    line-height: 2;
+    background-color: #FFFFFF;
+  }
+  .explanation {
+    font-size: 1.25rem;
+  }
+  .learn-more {
+    font-size: 2rem;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
