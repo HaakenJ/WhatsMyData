@@ -128,12 +128,12 @@ nav {
         right: -33px;
     }
 
-    #plugins {
-        padding-left: 20px;
+    .lists {
+        padding-left: 20px !important;
         margin-top: 0;
     }
 
-    .plugin-name {
+    .list-item {
         list-style-type: circle !important;
     }
 

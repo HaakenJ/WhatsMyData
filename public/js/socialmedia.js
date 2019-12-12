@@ -21,9 +21,6 @@ var socialMediaLogins = function (callback) {
 		url: "https://login.skype.com/login?message=signin_continue&redirect_uri=https%3A%2F%2Fsecure.skype.com%2Ffavicon.ico",
 		name: "Skype"
 	}, {
-		url: "https://www.flickr.com/signin/yahoo/?redir=https%3A%2F%2Fwww.flickr.com/favicon.ico",
-		name: "Flickr"
-	}, {
 		url: "https://www.spotify.com/de/login/?forward_url=https%3A%2F%2Fwww.spotify.com%2Ffavicon.ico",
 		name: "Spotify"
 	}, {
@@ -67,7 +64,7 @@ var socialMediaLogins = function (callback) {
 		name: "Blogger"
 	}];
 
-	socialMediaSites.forEach(function(network) {
+	socialMediaSites.forEach(function (network) {
 		// The onload function would not work when using jQuery to
 		// create the img element...
 		var img = document.createElement('img');
@@ -86,7 +83,7 @@ var socialMediaLogins = function (callback) {
 
 // Callback function add the logins to the html page.
 function addNetworkToList(name) {
-	let newNetwork = $("<li>").text(name);
+	let newNetwork = $("<li>").text(name).addClass("card-desc list-item");
 	$("#media-logins").append(newNetwork);
 };
 

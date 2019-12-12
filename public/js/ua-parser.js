@@ -31,7 +31,7 @@ $(document).ready(() => {
     for (let i = 0; i < pluginArray.length; i++) {
         let currentPlugin = $("<li>")
             .text(pluginArray[i].name)
-            .addClass("plugin-name");
+            .addClass("list-item");
         $("#plugins").append(currentPlugin);
     }
 });
