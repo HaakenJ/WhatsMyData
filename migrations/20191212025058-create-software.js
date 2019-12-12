@@ -1,30 +1,18 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Hardware', {
+    return queryInterface.createTable('Software', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      dev-type: {
+      os: {
         type: Sequelize.STRING
       },
-      vendor: {
+      browser: {
         type: Sequelize.STRING
-      },
-      model: {
-        type: Sequelize.STRING
-      },
-      cpu: {
-        type: Sequelize.STRING
-      },
-      cores: {
-        type: Sequelize.INTEGER
-      },
-      battery-level: {
-        type: Sequelize.INTEGER
       },
       createdAt: {
         allowNull: false,
@@ -37,6 +25,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Hardware');
+    return queryInterface.dropTable('Software');
   }
 };
