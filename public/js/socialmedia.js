@@ -76,7 +76,6 @@ var socialMediaLogins = function (callback) {
 			callback(network.name);
 		};
 		img.onerror = function () {
-			console.log(`Not logged in to ${network.name}`);
 		};
 	});
 };

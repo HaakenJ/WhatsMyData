@@ -131,7 +131,7 @@
             <div class="col s4">
                 <div class="card-shadow z-depth-4" id="hardware-shadow"></div>
                 <div class="card-content z-depth-4">
-                    <div class="card-title header">You are logged in at:</div>
+                    <div class="card-title header">You Are Logged In At:</div>
                     <ul class="data lists" id="media-logins">
 
                     </ul>
@@ -141,16 +141,43 @@
                 <div class="card-about">
                     <div class="card-title header">Does this get used against me?</div>
                     <p class="explanation">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing 
-                        elit, sed do eiusmod tempor incididunt ut labore et 
-                        dolore magna aliqua. Ut enim ad minim veniam, quis 
-                        nostrud exercitation ullamco laboris nisi ut aliquip 
-                        ex ea commodo consequat. Duis aute irure dolor in 
-                        reprehenderit in voluptate velit esse cillum dolore eu 
-                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat 
-                        non proident, sunt in culpa qui officia deserunt mollit 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
                         anim id est laborum.
                     </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gyroscope Data -->
+        <div class="data-container row">
+            <div class="col s6">
+                <div class="card-about">
+                    <div class="card-title header">What is this data used for?</div>
+                    <p class="explanation">
+                        This data is generally nothing to worry about. In fact,
+                        without it many websites may not work because certain
+                        aspects of the site may be operating system, browser
+                        and browser version specific.
+                    </p>
+                </div>
+            </div>
+            <div class="col s4 offset-s2">
+                <div class="card-shadow z-depth-4" id="software-shadow"></div>
+                <div class="card-content z-depth-4" id="software-card">
+                    <div class="card-title header">Your Orientation:</div>
+                    <div class="card-desc">Absolute Reference: 
+                        <span class="data" id="isAbsolute"></span>
+                    </div>
+                    <div class="card-desc">X-Axis: <span class="data" id="x"></span></div>
+                    <div class="card-desc">Y-Axis: <span class="data" id="y"></span></div>
+                    <div class="card-desc">Z-Axis: <span class="data" id="z"></span></div>
                 </div>
             </div>
         </div>
@@ -171,8 +198,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <!-- ua-parser code -->
     <script src="js/ua-parser.js"></script>
-    <!-- Social Media Login Parser -->
+    <!-- Social Media Login function -->
     <script src="js/socialmedia.js"></script>
+    <!-- Gyroscope function -->
+    <script src="js/gyroscope.js"></script>
 </body>
 
 </html>
