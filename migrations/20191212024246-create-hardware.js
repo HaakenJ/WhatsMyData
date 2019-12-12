@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      dev-type: {
+      devType: {
         type: Sequelize.STRING
       },
       vendor: {
@@ -23,7 +23,7 @@ module.exports = {
       cores: {
         type: Sequelize.INTEGER
       },
-      battery-level: {
+      batteryLevel: {
         type: Sequelize.INTEGER
       },
       createdAt: {
