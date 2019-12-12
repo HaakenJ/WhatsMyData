@@ -16,7 +16,7 @@
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
@@ -29,6 +29,7 @@
         </nav>
     </div>
 
+    <!-- Banner -->
     <div class="banner z-depth-2">
         <div class="logo-container">
             <span class="logo" id="logo-what">What's</span>
@@ -37,12 +38,14 @@
         </div>
     </div>
 
+    <!-- Page Description -->
     <div class="description">
         What does every website know about you and how can they use it?
     </div>
 
 
     <div class="container">
+        <!-- Hardware Data -->
         <div class="data-container row">
             <div class="col s4">
                 <div class="card-shadow z-depth-4" id="hardware-shadow"></div>
@@ -74,6 +77,7 @@
             </div>
         </div>
 
+        <!-- Software Data -->
         <div class="data-container row">
             <div class="col s6">
                 <div class="card-about">
@@ -98,6 +102,7 @@
             </div>
         </div>
 
+        <!-- Hardware Software Summary -->
         <div class="row top-margin">
             <div class="learn-more description col s12">
                 Hardware and software data is collected from the user agent string that
@@ -120,6 +125,33 @@
                 </div>
             </div>
         </div>
+
+        <!-- Social Media Data -->
+        <div class="data-container row">
+            <div class="col s4">
+                <div class="card-shadow z-depth-4" id="hardware-shadow"></div>
+                <div class="card-content z-depth-4">
+                    <div class="card-title header">Your Current Logins:</div>
+                    <ul id="media-logins">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col s6 offset-s2">
+                <div class="card-about">
+                    <div class="card-title header">Is This Dangerous?</div>
+                    <p class="explanation">
+                        Not really, a website could use this data to help create a digital fingerprint of you
+                        but for the most part it is only used to optimize what content they show you based on the speed
+                        and
+                        and
+                        memory
+                        capabilites of your computer.
+                    </p>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -136,6 +168,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <!-- ua-parser code -->
     <script src="js/ua-parser.js"></script>
+    <!-- Social Media Login Parser -->
+    <script src="js/socialmedia.js"></script>
 </body>
 
 </html>
