@@ -30,7 +30,12 @@ nav {
     text-shadow: 1px 1px 1px rgb(175, 175, 175);
 }
 
-@media only screen and (min-width: 0px) {
+@media only screen and (min-width: 768px) {
+
+    #nav-logo {
+        font-size: 1.3rem;
+    }
+
     .banner {
         height: 500px;
         background-image: url("../images/data-center.png");
@@ -99,28 +104,36 @@ nav {
         z-index: -1;
     }
 
-    #hardware-shadow {
+    .left-shadow {
         position: absolute;
         top: -15px;
         left: -15px;
     }
 
+    .right-shadow {
+        position: absolute;
+        top: -15px;
+        right: -55px;
+    }
+
     .card-content {
         width: 300px;
+        min-height: 320px;
         padding: 25px;
         line-height: 2;
         background-color: #FFFFFF;
     }
 
+    .data-container 
+    .col.s6.right-side-text {
+        position: relative;
+        right: -45px;
+    }
+
     .card-about {
         position: relative;
         top: 33px;
-    }
-
-    #software-shadow {
-        position: absolute;
-        top: -15px;
-        right: -55px;
+        max-width: 350px;
     }
 
     #software-card {
@@ -128,13 +141,13 @@ nav {
         right: -33px;
     }
 
-    .lists {
-        padding-left: 20px !important;
+    ul.data.lists {
+        padding-left: 20px;
         margin-top: 0;
     }
 
-    .list-item {
-        list-style-type: circle !important;
+    ul li.list-item {
+        list-style-type: circle;
     }
 
     .top-margin {
@@ -151,6 +164,7 @@ nav {
         font-family: $header-font;
         display: block;
     }
+
     .link-btn:hover {
         background-color: #d4db32;
     }
@@ -161,6 +175,14 @@ nav {
 
     #user-agent-spoof {
         margin-top: 20px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    .data-container 
+    .col.s6.right-side-text {
+        position: relative;
+        right: -55px;
     }
 }
 
@@ -197,11 +219,25 @@ nav {
         background-color: #FFFFFF;
     }
 
+    .data-container 
+    .col.s6.right-side-text {
+        position: relative;
+        right: -55px;
+    }
+
+    .card-about {
+        max-width: 550px;
+    }
+
     .explanation {
         font-size: 1.25rem;
     }
 
     .learn-more {
         font-size: 2rem;
+    }
+
+    .top-margin {
+        margin-top: 350px
     }
 }
