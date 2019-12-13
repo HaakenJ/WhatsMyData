@@ -141,18 +141,11 @@ nav {
     margin-top: 20px;
   }
 }
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
 
 @media only screen and (min-width: 900px) {
   .banner {
     height: 510px;
   }
-=======
-
-@media only screen and (min-width: 900px) {
->>>>>>> 17a84c24f587f4957133a48d066fa90180c7519a
   .data-container
 .col.s6.right-side-text {
     position: relative;
@@ -204,8 +197,4 @@ nav {
     margin-top: 350px;
   }
 }
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
->>>>>>> 17a84c24f587f4957133a48d066fa90180c7519a
 /*# sourceMappingURL=styles.css.map */
