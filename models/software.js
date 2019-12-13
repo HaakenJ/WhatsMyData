@@ -5,10 +5,13 @@ module.exports = (sequelize, DataTypes) => {
     osVersion: DataTypes.STRING,
     browser: DataTypes.STRING,
     browserVersion: DataTypes.STRING
-  }, {});
+  }, {
+    freezeTableName: true,
+    tableName: "Software"
+  });
   Software.associate = function(models) {
     // associations can be defined here
-    Software.belongsTo(models.IP);
+    Software.hasOne(models.IP);
   };
   return Software;
 };

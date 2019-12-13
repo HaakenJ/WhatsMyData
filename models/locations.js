@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Locations.associate = function(models) {
     // associations can be defined here
-    Locations.belongsTo(models.IP);
+    Locations.hasOne(models.IP);
   };
   return Locations;
 };

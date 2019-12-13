@@ -24,7 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {});
   Logins.associate = function(models) {
     // associations can be defined here
-    Logins.belongsTo(models.IP);
+    Logins.hasOne(models.IP);
   };
   return Logins;
 };

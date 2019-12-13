@@ -2,7 +2,10 @@
 module.exports = (sequelize, DataTypes) => {
   const IP = sequelize.define('IP', {
     ip: DataTypes.STRING
-  }, {});
+  }, {
+    freezeTableName: true,
+    tableName: "IP"
+  });
   IP.associate = function(models) {
     // associations can be defined here
     IP.hasOne(models.Hardware);
