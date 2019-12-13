@@ -26,12 +26,12 @@ nav {
     font-size: 1.3rem;
   }
   .banner {
-    height: 500px;
+    height: 575px;
     background-image: url("../images/data-center.png");
   }
   .logo-container {
     position: relative;
-    top: 100px;
+    top: 135px;
     text-shadow: 2px 5px 5px gray;
   }
   .logo {
