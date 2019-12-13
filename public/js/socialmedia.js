@@ -54,9 +54,6 @@ var socialMediaLogins = function (callback) {
 		url: "https://store.steampowered.com/login/?redir=favicon.ico",
 		name: "Steam"
 	}, {
-		url: "https://www.academia.edu/login?cp=/favicon.ico&cs=www",
-		name: "Academia.edu"
-	}, {
 		url: "https://stackoverflow.com/users/login?ssrc=head&returnurl=http%3a%2f%2fstackoverflow.com%2ffavicon.ico",
 		name: "Stack Overflow"
 	}, , {
@@ -75,8 +72,7 @@ var socialMediaLogins = function (callback) {
 			console.log(`Logged into ${network.name}`);
 			callback(network.name);
 		};
-		img.onerror = function () {
-		};
+		img.onerror = function () {};
 	});
 };
 

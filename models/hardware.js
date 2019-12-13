@@ -6,10 +6,13 @@ module.exports = (sequelize, DataTypes) => {
     model: DataTypes.STRING,
     cpu: DataTypes.STRING,
     cores: DataTypes.INTEGER,
-    batteryLevel: DataTypes.INTEGER
+    batteryLevel: DataTypes.INTEGER,
+    screenHeight: DataTypes.INTEGER,
+    screenWidth: DataTypes.INTEGER
   }, {});
   Hardware.associate = function(models) {
     // associations can be defined here
+    Hardware.belongsTo(models.IP);
   };
   return Hardware;
 };

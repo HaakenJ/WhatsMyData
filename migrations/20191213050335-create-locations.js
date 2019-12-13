@@ -1,36 +1,27 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Hardware', {
+    return queryInterface.createTable('Locations', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      devType: {
+      continent: {
         type: Sequelize.STRING
       },
-      vendor: {
+      country: {
         type: Sequelize.STRING
       },
-      model: {
+      city: {
         type: Sequelize.STRING
       },
-      cpu: {
-        type: Sequelize.STRING
+      latitude: {
+        type: Sequelize.FLOAT
       },
-      cores: {
-        type: Sequelize.INTEGER
-      },
-      batteryLevel: {
-        type: Sequelize.INTEGER
-      },
-      screenHeight: {
-        type: Sequelize.INTEGER
-      },
-      screenWidth: {
-        type: Sequelize.INTEGER
+      longitude: {
+        type: Sequelize.FLOAT
       },
       createdAt: {
         allowNull: false,
@@ -43,6 +34,6 @@ module.exports = {
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Hardware');
+    return queryInterface.dropTable('Locations');
   }
 };
