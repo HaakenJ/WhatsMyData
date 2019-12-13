@@ -1,5 +1,5 @@
 body {
-  height: 3000px;
+  height: 4000px;
   color: #00171F;
 }
 
@@ -21,14 +21,17 @@ nav {
   text-shadow: 1px 1px 1px #afafaf;
 }
 
-@media only screen and (min-width: 0px) {
+@media only screen and (min-width: 768px) {
+  #nav-logo {
+    font-size: 1.3rem;
+  }
   .banner {
-    height: 500px;
+    height: 575px;
     background-image: url("../images/data-center.png");
   }
   .logo-container {
     position: relative;
-    top: 100px;
+    top: 135px;
     text-shadow: 2px 5px 5px gray;
   }
   .logo {
@@ -78,36 +81,43 @@ nav {
     width: 350px;
     z-index: -1;
   }
-  #hardware-shadow {
+  .left-shadow {
     position: absolute;
     top: -15px;
     left: -15px;
   }
+  .right-shadow {
+    position: absolute;
+    top: -15px;
+    right: -55px;
+  }
   .card-content {
     width: 300px;
+    min-height: 320px;
     padding: 25px;
     line-height: 2;
     background-color: #FFFFFF;
   }
+  .data-container
+.col.s6.right-side-text {
+    position: relative;
+    right: -45px;
+  }
   .card-about {
     position: relative;
     top: 33px;
-  }
-  #software-shadow {
-    position: absolute;
-    top: -15px;
-    right: -55px;
+    max-width: 350px;
   }
   #software-card {
     position: absolute;
     right: -33px;
   }
-  #plugins {
+  ul.data.lists {
     padding-left: 20px;
     margin-top: 0;
   }
-  .plugin-name {
-    list-style-type: circle !important;
+  ul li.list-item {
+    list-style-type: circle;
   }
   .top-margin {
     margin-top: 250px;
@@ -131,6 +141,7 @@ nav {
     margin-top: 20px;
   }
 }
+<<<<<<< HEAD
 <<<<<<< Updated upstream
 =======
 
@@ -138,6 +149,10 @@ nav {
   .banner {
     height: 510px;
   }
+=======
+
+@media only screen and (min-width: 900px) {
+>>>>>>> 17a84c24f587f4957133a48d066fa90180c7519a
   .data-container
 .col.s6.right-side-text {
     position: relative;
@@ -189,5 +204,8 @@ nav {
     margin-top: 350px;
   }
 }
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> 17a84c24f587f4957133a48d066fa90180c7519a
 /*# sourceMappingURL=styles.css.map */
