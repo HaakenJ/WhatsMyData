@@ -81,7 +81,3 @@ function addNetworkToList(name) {
 	let newNetwork = $("<li>").text(name).addClass("card-desc list-item");
 	$("#media-logins").append(newNetwork);
 };
-
-$(document).ready(() => {
-	socialMediaLogins(addNetworkToList);
-});

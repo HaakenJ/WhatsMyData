@@ -4,13 +4,16 @@ $(document).ready(() => {
     parserCPU = parser.getCPU(),
     parserOS = parser.getOS(),
     parserBrowser = parser.getBrowser();
+  let devType,
+    vendor,
+    model;
 
   if (device.type === undefined) {
-    const devType = "PC",
+    devType = "PC",
       vendor = null,
       model = null;
   } else {
-    const devType = device.type,
+    devType = device.type,
       vendor = device.vendor,
       model = device.model;
   }
@@ -29,42 +32,57 @@ $(document).ready(() => {
     os = parserOS.name,
     osVersion = os.version,
     browser = parserBrowser.name,
-    browserVersion = browser.version,
-    logins = {};
+    browserVersion = browser.version;
 
-  setTimeout(() => {
-    $("#media-logins li").each(function(index) {
-      logins[$(this).text()] = true;
-    });
-    console.log(logins);
-  }, 1000);
+  let currentLogins = socialMediaLogins(addNetworkToList);
 
-  const postData = {
-    hardware: {
-      devType: devType,
-      vendor: vendor,
-      model: model,
-      cpu: cpu,
-      cores: cores,
-      batteryLevel: batteryLevel,
-      screenHeight: screenHeight,
-      screenWidth: screenWidth
-    },
-    software: {
-      os: os,
-      osVersion: osVersion,
-      browser: browser,
-      browserVersion: browserVersion
-    },
-    location: {
-      continent: continent,
-      country: country,
-      city: city,
-      latitude: latitude,
-      longitude: longitude
-    },
-    logins
+  let postData = {
+    devType: devType,
+    vendor: vendor,
+    model: model,
+    cpu: cpu,
+    cores: cores,
+    batteryLevel: batteryLevel,
+    screenHeight: screenHeight,
+    screenWidth: screenWidth,
+    os: os,
+    osVersion: osVersion,
+    browser: browser,
+    browserVersion: browserVersion,
+    continent: continent,
+    country: country,
+    city: city,
+    latitude: latitude,
+    longitude: longitude
   };
+
+  // currentLogins.forEach((network) => {
+  //   postData[network] = true;
+  // });
+
+  // setTimeout(() => {
+  //   $("#media-logins li").each(function (index) {
+  //     postData[$(this).text()] = true;
+  //   });
+  //   console.log(logins);
+  // }, 1000);
+
+  console.log(postData);
+
+  $.ajax({
+    type: "POST",
+    url: "/api/userData",
+    data: postData,
+  }).then(() => {
+    console.log("Logged the data");
+  })
+
+  // $.post("/api/userData", postData)
+  //   .then(function () {
+  //     console.log("Logged the data");
+  //     // Reload the page to get the updated list
+  //     location.reload();
+  //   });
 
 });
 
