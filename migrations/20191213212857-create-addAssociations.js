@@ -68,7 +68,7 @@ module.exports = {
                             key: "id"
                           },
                           onUpdate: "CASCADE",
-                          onDelete: "SET NULL"
+                          onDelete: "CASCADE"
                         }
                       )
                       .then(() => {
@@ -81,7 +81,7 @@ module.exports = {
                                 key: "id"
                               },
                               onUpdate: "CASCADE",
-                              onDelete: "SET NULL"
+                              onDelete: "CASCADE"
                             }
                           )
                           .then(() => {
@@ -94,7 +94,7 @@ module.exports = {
                                     key: "id"
                                   },
                                   onUpdate: "CASCADE",
-                                  onDelete: "SET NULL"
+                                  onDelete: "CASCADE"
                                 }
                               )
                               .then(() => {
@@ -107,7 +107,7 @@ module.exports = {
                                       key: "id"
                                     },
                                     onUpdate: "CASCADE",
-                                    onDelete: "SET NULL"
+                                    onDelete: "CASCADE"
                                   }
                                 )
                               });

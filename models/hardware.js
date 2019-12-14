@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   Hardware.associate = function(models) {
     // associations can be defined here
-    Hardware.hasOne(models.IP);
+    Hardware.belongsTo(models.IP);
   };
   return Hardware;
 };
