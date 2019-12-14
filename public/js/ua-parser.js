@@ -3,9 +3,7 @@ $(document).ready(() => {
         device = parser.getDevice(),
         cpu = parser.getCPU(),
         os = parser.getOS(),
-        browser = parser.getBrowser(),
-        screenHeight = screen.height,
-        screenWidth = screen.width;
+        browser = parser.getBrowser();
 
     if (device.type === undefined) {
         $("#device-type").text("PC");

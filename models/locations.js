@@ -8,7 +8,6 @@ module.exports = (sequelize, DataTypes) => {
     longitude: DataTypes.FLOAT
   }, {});
   Locations.associate = function(models) {
-    // associations can be defined here
     Locations.belongsTo(models.IP);
   };
   return Locations;

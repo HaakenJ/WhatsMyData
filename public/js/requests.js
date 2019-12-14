@@ -1,24 +1,46 @@
-import { request } from "express";
-
 $(document).ready(() => {
-  let devType,
-    vendor,
-    model,
-    cpu,
-    cores,
-    batteryLevel,
-    ipAdd,
-    continent,
-    country,
-    city,
-    latitude,
-    longitude,
-    logins,
-    os,
-    osVersion,
-    browser,
-    browserVersion;  
-})
+  const parser = new UAParser(),
+    device = parser.getDevice(),
+    parserCPU = parser.getCPU(),
+    parserOS = parser.getOS(),
+    parserBrowser = parser.getBrowser();
+
+  if (device.type === undefined) {
+    const devType = "PC",
+      vendor = null,
+      model = null;
+  } else {
+    const devType = device.type,
+      vendor = device.vendor,
+      model = device.model;
+  }
+
+  const cpu = parserCPU.architecture,
+    cores = navigator.hardwareConcurrency,
+    batteryLevel = navigator.getBattery().level * 100,
+    screenHeight = window.screen.height * window.devicePixelRatio,
+    screenWidth = window.screen.width * window.devicePixelRatio,
+    ipAdd = "",
+    continent = "",
+    country = "",
+    city = "",
+    latitude = "",
+    longitude = "",
+    os = parserOS.name,
+    osVersion = os.version,
+    browser = parserBrowser.name,
+    browserVersion = browser.version,
+    logins = {};
+
+  setTimeout(() => {
+    $("#media-logins li").each(function(index) {
+      logins[$(this).text()] = true;
+    });
+    console.log(logins);
+  }, 1000);
+
+
+});
 
 
 // I will create an object with nested objects to be sent as the post request.url

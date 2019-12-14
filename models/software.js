@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
     tableName: "Software"
   });
   Software.associate = function(models) {
-    // associations can be defined here
     Software.belongsTo(models.IP);
   };
   return Software;
