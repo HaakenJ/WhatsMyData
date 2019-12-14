@@ -16,19 +16,20 @@
 </head>
 
 <body>
-
+    <!-- Navbar -->
     <div class="navbar-fixed">
         <nav>
             <div class="nav-wrapper">
-                <a href="#!" class="brand-logo">Logo</a>
+                <a href="#!" class="brand-logo header" id="nav-logo">01100100 01100001 01110100 01100001</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="sass.html">Github</a></li>
-                    <li><a href="badges.html">Components</a></li>
+                    <li><a href="https://github.com/HaakenJ/Project2"><i
+                        class="fab fa-github"></i></a></li>
                 </ul>
             </div>
         </nav>
     </div>
 
+    <!-- Banner -->
     <div class="banner z-depth-2">
         <div class="logo-container">
             <span class="logo" id="logo-what">What's</span>
@@ -37,15 +38,17 @@
         </div>
     </div>
 
+    <!-- Page Description -->
     <div class="description">
         What does every website know about you and how can they use it?
     </div>
 
 
     <div class="container">
+        <!-- Hardware Data -->
         <div class="data-container row">
             <div class="col s4">
-                <div class="card-shadow z-depth-4" id="hardware-shadow"></div>
+                <div class="card-shadow z-depth-4 left-shadow"></div>
                 <div class="card-content z-depth-4">
                     <div class="card-title header">Your Hardware:</div>
                     <div class="card-desc">Your Device Type: <span class="data" id="device-type"></span></div>
@@ -57,12 +60,13 @@
                     </div>
                     <div class="card-desc">Your Current Battery Level: <span class="data" id="battery-level"></span>
                     </div>
+                    <div class="card-desc">Your Screen Size: <span class="data" id="screen-size"></span></div>
                 </div>
             </div>
-            <div class="col s6 offset-s2">
+            <div class="col s6 offset-s2 right-side-text">
                 <div class="card-about">
                     <div class="card-title header">Is This Dangerous?</div>
-                    <p class="explaination">
+                    <p class="explanation">
                         Not really, a website could use this data to help create a digital fingerprint of you
                         but for the most part it is only used to optimize what content they show you based on the speed
                         and
@@ -74,11 +78,12 @@
             </div>
         </div>
 
+        <!-- Software Data -->
         <div class="data-container row">
             <div class="col s6">
                 <div class="card-about">
                     <div class="card-title header">What is this data used for?</div>
-                    <p class="explaination">
+                    <p class="explanation">
                         This data is generally nothing to worry about. In fact,
                         without it many websites may not work because certain
                         aspects of the site may be operating system, browser
@@ -87,17 +92,18 @@
                 </div>
             </div>
             <div class="col s4 offset-s2">
-                <div class="card-shadow z-depth-4" id="software-shadow"></div>
+                <div class="card-shadow z-depth-4 right-shadow"></div>
                 <div class="card-content z-depth-4" id="software-card">
                     <div class="card-title header">Your Software:</div>
                     <div class="card-desc">Operating System: <span class="data" id="op-sys"></span></div>
                     <div class="card-desc">Browser: <span class="data" id="browser"></span></div>
-                    <div class="card-desc">Browser Plugins:<ul class="data" id="plugins"></ul>
+                    <div class="card-desc">Browser Plugins:<ul class="data lists" id="plugins"></ul>
                     </div>
                 </div>
             </div>
         </div>
 
+        <!-- Hardware Software Summary -->
         <div class="row top-margin">
             <div class="learn-more description col s12">
                 Hardware and software data is collected from the user agent string that
@@ -120,6 +126,67 @@
                 </div>
             </div>
         </div>
+
+        <!-- Social Media Data -->
+        <div class="data-container row">
+            <div class="col s4">
+                <div class="card-shadow z-depth-4 left-shadow"></div>
+                <div class="card-content z-depth-4">
+                    <div class="card-title header">You Are Logged In At:</div>
+                    <ul class="data lists" id="media-logins">
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col s6 offset-s2 right-side-text">
+                <div class="card-about">
+                    <div class="card-title header">Does this get used against me?</div>
+                    <p class="explanation">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing
+                        elit, sed do eiusmod tempor incididunt ut labore et
+                        dolore magna aliqua. Ut enim ad minim veniam, quis
+                        nostrud exercitation ullamco laboris nisi ut aliquip
+                        ex ea commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gyroscope Data -->
+        <div class="data-container row">
+            <div class="col s6">
+                <div class="card-about">
+                    <div class="card-title header">What is this data used for?</div>
+                    <p class="explanation">
+                        Sed ut perspiciatis unde omnis iste natus error sit 
+                        voluptatem accusantium doloremque laudantium, totam 
+                        rem aperiam, eaque ipsa quae ab illo inventore 
+                        veritatis et quasi architecto beatae vitae dicta sunt 
+                        explicabo. Nemo enim ipsam voluptatem quia voluptas 
+                        sit aspernatur aut odit aut fugit, sed quia 
+                        consequuntur magni dolores eos qui ratione voluptatem 
+                        sequi nesciunt. 
+                    </p>
+                </div>
+            </div>
+            <div class="col s4 offset-s2">
+                <div class="card-shadow z-depth-4 right-shadow"></div>
+                <div class="card-content z-depth-4" id="software-card">
+                    <div class="card-title header">Your Orientation:</div>
+                    <div class="card-desc">Absolute Reference: 
+                        <span class="data" id="isAbsolute"></span>
+                    </div>
+                    <div class="card-desc">X-Axis: <span class="data" id="x"></span></div>
+                    <div class="card-desc">Y-Axis: <span class="data" id="y"></span></div>
+                    <div class="card-desc">Z-Axis: <span class="data" id="z"></span></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
 
@@ -132,10 +199,16 @@
     <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
     <!-- Materialize -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9963e93bef.js" crossorigin="anonymous"></script>
     <!-- Anime.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
     <!-- ua-parser code -->
     <script src="js/ua-parser.js"></script>
+    <!-- Social Media Login function -->
+    <script src="js/socialmedia.js"></script>
+    <!-- Gyroscope function -->
+    <script src="js/gyroscope.js"></script>
 </body>
 
 </html>

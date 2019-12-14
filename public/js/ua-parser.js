@@ -3,7 +3,9 @@ $(document).ready(() => {
         device = parser.getDevice(),
         cpu = parser.getCPU(),
         os = parser.getOS(),
-        browser = parser.getBrowser();
+        browser = parser.getBrowser(),
+        screenHeight = screen.height,
+        screenWidth = screen.width;
 
     if (device.type === undefined) {
         $("#device-type").text("PC");
@@ -17,7 +19,8 @@ $(document).ready(() => {
 
     $("#cpu").text(cpu.architecture);
     $("#cores").text(navigator.hardwareConcurrency);
-
+    $("#screen-size").text(window.screen.width * window.devicePixelRatio + "x" + window.screen.height * window.devicePixelRatio);
+    
     navigator.getBattery().then((battery) => {
         $("#battery-charging").text(battery.charging ? "Yes" : "No");
         $("#battery-level").text(`${battery.level * 100}%`);
@@ -31,7 +34,7 @@ $(document).ready(() => {
     for (let i = 0; i < pluginArray.length; i++) {
         let currentPlugin = $("<li>")
             .text(pluginArray[i].name)
-            .addClass("plugin-name");
+            .addClass("list-item");
         $("#plugins").append(currentPlugin);
     }
 });
