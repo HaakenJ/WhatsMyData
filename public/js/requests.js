@@ -20,7 +20,6 @@ $(document).ready(() => {
 
   const cpu = parserCPU.architecture,
     cores = navigator.hardwareConcurrency,
-    batteryLevel = navigator.getBattery().level * 100,
     screenHeight = window.screen.height * window.devicePixelRatio,
     screenWidth = window.screen.width * window.devicePixelRatio,
     ipAdd = "",
@@ -69,20 +68,10 @@ $(document).ready(() => {
 
   console.log(postData);
 
-  $.ajax({
-    type: "POST",
-    url: "/api/userData",
-    data: postData,
-  }).then(() => {
-    console.log("Logged the data");
-  })
-
-  // $.post("/api/userData", postData)
-  //   .then(function () {
-  //     console.log("Logged the data");
-  //     // Reload the page to get the updated list
-  //     location.reload();
-  //   });
+  $.post("/api/userData", postData)
+    .then(function () {
+      console.log("Logged the data");
+    });
 
 });
 

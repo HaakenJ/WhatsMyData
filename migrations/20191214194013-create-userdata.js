@@ -26,9 +26,6 @@ module.exports = {
       cores: {
         type: Sequelize.INTEGER
       },
-      batteryLevel: {
-        type: Sequelize.INTEGER
-      },
       screenHeight: {
         type: Sequelize.INTEGER
       },

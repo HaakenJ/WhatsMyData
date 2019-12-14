@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
     model: DataTypes.STRING,
     cpu: DataTypes.STRING,
     cores: DataTypes.INTEGER,
-    batteryLevel: DataTypes.INTEGER,
     screenHeight: DataTypes.INTEGER,
     screenWidth: DataTypes.INTEGER,
     os: DataTypes.STRING,
