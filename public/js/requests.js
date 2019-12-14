@@ -75,6 +75,12 @@ $(document).ready(() => {
     console.log(response);
   });
 
+  $.ajax({
+    type: "GET",
+    url: "https://api.ipify.org?format=json"
+  }).then((response) => {
+    console.log(response);
+  })
 });
 
 
