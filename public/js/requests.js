@@ -56,8 +56,15 @@ $(document).ready(() => {
       browser: browser,
       browserVersion: browserVersion
     },
-    
-  }
+    location: {
+      continent: continent,
+      country: country,
+      city: city,
+      latitude: latitude,
+      longitude: longitude
+    },
+    logins
+  };
 
 });
 
