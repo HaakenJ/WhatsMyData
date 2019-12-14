@@ -39,6 +39,25 @@ $(document).ready(() => {
     console.log(logins);
   }, 1000);
 
+  const postData = {
+    hardware: {
+      devType: devType,
+      vendor: vendor,
+      model: model,
+      cpu: cpu,
+      cores: cores,
+      batteryLevel: batteryLevel,
+      screenHeight: screenHeight,
+      screenWidth: screenWidth
+    },
+    software: {
+      os: os,
+      osVersion: osVersion,
+      browser: browser,
+      browserVersion: browserVersion
+    },
+    
+  }
 
 });
 
