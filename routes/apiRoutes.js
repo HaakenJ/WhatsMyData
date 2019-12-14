@@ -11,9 +11,9 @@ module.exports = function(app) {
   // Create a new example
   app.post("/api/userData", function(req, res) {
     console.log(req.body);
-    // db.Example.create(req.body).then(function(dbExample) {
-    //   res.json(dbExample);
-    // });
+    db.userdata.create(req.body).then((dbuserdata) => {
+      res.json(dbuserdata);
+    });
   });
 
   // Delete an example by id

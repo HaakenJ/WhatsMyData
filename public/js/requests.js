@@ -41,7 +41,6 @@ $(document).ready(() => {
     model: model,
     cpu: cpu,
     cores: cores,
-    batteryLevel: batteryLevel,
     screenHeight: screenHeight,
     screenWidth: screenWidth,
     os: os,
@@ -68,14 +67,14 @@ $(document).ready(() => {
 
   console.log(postData);
 
-  $.post("/api/userData", postData)
-    .then(function () {
-      console.log("Logged the data");
-    });
+  $.ajax({
+    type: "POST",
+    url: "/api/userData",
+    data: postData,
+  }).then((response) => {
+    console.log(response);
+  });
 
 });
 
 
-// I will create an object with nested objects to be sent as the post request.url
-// Each nested object will be titled as the table name the data goes to.
-// Each nested object will contain the data for that table.
