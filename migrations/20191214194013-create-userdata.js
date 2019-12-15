@@ -35,16 +35,7 @@ module.exports = {
       os: {
         type: Sequelize.STRING
       },
-      osVersion: {
-        type: Sequelize.STRING
-      },
       browser: {
-        type: Sequelize.STRING
-      },
-      browserVersion: {
-        type: Sequelize.STRING
-      },
-      continent: {
         type: Sequelize.STRING
       },
       country: {

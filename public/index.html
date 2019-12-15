@@ -186,10 +186,36 @@
             </div>
         </div>
 
+        <!-- IP Address Data -->
+        <div class="data-container row">
+            <div class="col s6">
+                <div class="card-about">
+                    <div class="card-title header">What is this data used for?</div>
+                    <p class="explanation">
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo. Nemo enim ipsam voluptatem quia voluptas
+                        sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                    </p>
+                </div>
+            </div>
+            <div class="col s4 offset-s2">
+                <div class="card-shadow z-depth-4 right-shadow"></div>
+                <div class="card-content z-depth-4" id="software-card">
+                    <div class="card-title header">Data From Your IP:</div>
+                    <div class="card-desc">IP Address: <span class="data" id="ip-address"></span></div>
+                    <div class="card-desc">City: <span class="data" id="city"></span></div>
+                    <div class="card-desc">Country:<ul class="data lists" id="country"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
-
-
-
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-3.4.1.js"
@@ -208,6 +234,8 @@
     <script src="js/socialmedia.js"></script>
     <!-- Gyroscope function -->
     <script src="js/gyroscope.js"></script>
+    <!-- IP Address Functions -->
+    <script src="js/ipAddress.js"></script>
     <!-- API Functions -->
     <script src="js/requests.js"></script>
 </body>
