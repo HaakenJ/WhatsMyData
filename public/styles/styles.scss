@@ -210,6 +210,11 @@ nav {
         z-index: -1;
     }
 
+    div.chart-shadow {
+        width: 610px;
+        height: 400px;
+    }
+
     #hardware-shadow {
         position: absolute;
         top: -20px;
@@ -222,6 +227,11 @@ nav {
         padding: 25px;
         line-height: 2;
         background-color: #FFFFFF;
+    }
+
+    div.chart-card {
+        width: 560px;
+        min-height: 450px;
     }
 
     .data-container 
