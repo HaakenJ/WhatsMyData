@@ -64,7 +64,7 @@ $.get("/api/browser", (response) => {
       case "Silk":
         objOfArrays[record.devType][4] = record.no_browser;
         break;
-      case "Chrome Webview":
+      case "Chrome WebView":
         objOfArrays[record.devType][5] = record.no_browser;
         break;
       case "Edge":
