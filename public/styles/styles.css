@@ -203,6 +203,10 @@ nav {
     width: 350px;
     z-index: -1;
   }
+  div.chart-shadow {
+    width: 610px;
+    height: 400px;
+  }
   .left-shadow {
     position: absolute;
     top: -15px;
@@ -219,6 +223,10 @@ nav {
     padding: 25px;
     line-height: 2;
     background-color: #FFFFFF;
+  }
+  div.chart-card {
+    width: 560px;
+    min-height: 450px;
   }
   .data-container
 .col.m6.right-side-text {
