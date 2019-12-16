@@ -16,6 +16,15 @@ module.exports = function(app) {
     });
   });
 
+  app.get("/api/devtype", (req, res) => {
+    db.userdata.findAll({
+      attributes: ["devType", [sequelize.fn("COUNT", sequelize.col("devType"), 'no_devType')]],
+      group: ["devType"]
+    }).then((deviceTypes) => {
+      res.json(deviceTypes);
+    })
+  })
+
   // Delete an example by id
   // app.delete("/api/examples/:id", function(req, res) {
   //   db.Example.destroy({ where: { id: req.params.id } }).then(function(dbExample) {
