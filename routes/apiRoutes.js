@@ -1,4 +1,4 @@
-var db = require("../models");
+const db = require("../models");
 
 module.exports = function(app) {
   // Get all examples
@@ -18,7 +18,7 @@ module.exports = function(app) {
 
   app.get("/api/devtype", (req, res) => {
     db.userdata.findAll({
-      attributes: ["devType", [sequelize.fn("COUNT", sequelize.col("devType"), 'no_devType')]],
+      attributes: ["devType", [db.sequelize.fn("COUNT", db.sequelize.col("devType")), "no_devType"]],
       group: ["devType"]
     }).then((deviceTypes) => {
       res.json(deviceTypes);
