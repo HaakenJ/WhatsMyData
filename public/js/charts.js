@@ -12,8 +12,6 @@ $.get("/api/devtype", (response) => {
 
   // Set a callback to run when the Google Visualization API is loaded.
   google.charts.setOnLoadCallback(drawChart);
-
-  console.log(chartData);
   // Callback that creates and populates a data table,
   // instantiates the pie chart, passes in the data and
   // draws it.
@@ -39,8 +37,9 @@ $.get("/api/devtype", (response) => {
 });
 
 $.get("/api/browser", (response) => {
-  let chartData = [['Browsers', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
-  'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other'],],
+  console.log(response);
+  let chartData = [['devType', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
+  'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other']],
     objOfArrays = {};
 
   // Create an array in the proper format for each device type and 
@@ -51,6 +50,7 @@ $.get("/api/browser", (response) => {
     if (!objOfArrays[record.devType]) {
       objOfArrays[record.devType] = [record.devType, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     }
+    console.log(chartData);
     // Depending on what browser is in the record, add that value
     // to the proper location in the array. 
     switch (record.browser) {
