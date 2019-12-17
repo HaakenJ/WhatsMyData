@@ -68,11 +68,11 @@ var socialMediaLogins = function (callback) {
 		// The below line was stopping the login page from sending its info.
 		// img.referrerPolicy = "no-referrer";
 		img.src = network.url;
-		img.onload = function() {
+		img.onload = function () {
 			console.log(`Logged into ${network.name}`);
 			callback(network.name);
 		};
-		img.onerror = function() {};
+		img.onerror = function () {};
 	});
 };
 
