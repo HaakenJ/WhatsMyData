@@ -21,9 +21,11 @@ nav {
   text-shadow: 1px 1px 1px #afafaf;
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
   #nav-logo {
-    font-size: 1rem;
+    font-size: 0.6rem;
+    position: relative;
+    left: 175px;
   }
   .banner {
     height: 400px;
@@ -36,7 +38,7 @@ nav {
     text-shadow: 2px 5px 5px gray;
   }
   .logo {
-    font-size: 7rem;
+    font-size: 5rem;
     font-family: "Share Tech Mono", monospace;
   }
   #logo-what {
@@ -56,7 +58,7 @@ nav {
   .description {
     font-family: "Share Tech Mono", monospace;
     font-size: 3rem;
-    margin: 0 auto;
+    margin: 20px;
     text-align: center;
     width: 80%;
     font-weight: 600;
@@ -79,21 +81,16 @@ nav {
   .card-shadow {
     background-color: #073dd2;
     height: 240px;
-    width: 350px;
+    width: 317px;
     z-index: -1;
   }
-  .left-shadow {
+  .left-shadow,
+  .right-shadow {
     position: absolute;
     top: -15px;
     left: -15px;
   }
-  .right-shadow {
-    position: absolute;
-    top: -15px;
-    right: -55px;
-  }
   .card-content {
-    width: 300px;
     min-height: 320px;
     padding: 25px;
     line-height: 2;
@@ -109,9 +106,19 @@ nav {
     top: 33px;
     max-width: 350px;
   }
-  #software-card {
+  div.software-card {
     position: absolute;
-    right: -33px;
+    right: 10px;
+    top: 0;
+    width: 94%;
+  }
+  div.mobile-about {
+    top: 350px;
+  }
+  #gyro-card {
+    position: relative;
+    right: 10px;
+    top: 0;
   }
   ul.data.lists {
     padding-left: 20px;
@@ -121,11 +128,11 @@ nav {
     list-style-type: circle;
   }
   .top-margin {
-    margin-top: 250px;
+    margin-top: 450px;
   }
   .learn-more {
     font-family: "Share Tech Mono", monospace;
-    font-size: 1.7rem;
+    font-size: 1.3rem;
   }
   .link-btn {
     background-color: #d29c07;
@@ -246,7 +253,10 @@ nav {
     top: 33px;
     max-width: 350px;
   }
-  #software-card {
+  div.mobile-about {
+    top: 0;
+  }
+  div.software-card {
     position: absolute;
     right: -33px;
   }

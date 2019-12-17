@@ -30,10 +30,12 @@ nav {
     text-shadow: 1px 1px 1px rgb(175, 175, 175);
 }
 
-@media only screen and (min-width: 320px) {
+@media only screen and (min-width: 320px) and (max-width: 767px) {
 
     #nav-logo {
-        font-size: 1rem;
+        font-size: 0.6rem;
+        position: relative;
+        left: 175px;
     }
 
     .banner {
@@ -49,7 +51,7 @@ nav {
     }
 
     .logo {
-        font-size: 7rem;
+        font-size: 5rem;
         font-family: $header-font;
     }
 
@@ -73,7 +75,7 @@ nav {
     .description {
         font-family: $header-font;
         font-size: 3rem;
-        margin: 0 auto;
+        margin: 20px;
         text-align: center;
         width: 80%;
         font-weight: 600;
@@ -101,24 +103,18 @@ nav {
     .card-shadow {
         background-color: $primary;
         height: 240px;
-        width: 350px;
+        width: 317px;
         z-index: -1;
     }
 
-    .left-shadow {
+    .left-shadow,
+    .right-shadow {
         position: absolute;
         top: -15px;
         left: -15px;
     }
 
-    .right-shadow {
-        position: absolute;
-        top: -15px;
-        right: -55px;
-    }
-
     .card-content {
-        width: 300px;
         min-height: 320px;
         padding: 25px;
         line-height: 2;
@@ -137,9 +133,21 @@ nav {
         max-width: 350px;
     }
 
-    #software-card {
+    div.software-card {
         position: absolute;
-        right: -33px;
+        right: 10px;
+        top: 0;
+        width: 94%;
+    }
+
+    div.mobile-about {
+        top: 350px;
+    }
+
+    #gyro-card {
+        position: relative;
+        right: 10px;
+        top: 0;
     }
 
     ul.data.lists {
@@ -152,12 +160,12 @@ nav {
     }
 
     .top-margin {
-        margin-top: 250px
+        margin-top: 450px
     }
 
     .learn-more {
         font-family: $header-font;
-        font-size: 1.7rem;
+        font-size: 1.3rem;
     }
 
     .link-btn {
@@ -305,7 +313,11 @@ nav {
         max-width: 350px;
     }
 
-    #software-card {
+    div.mobile-about {
+        top: 0;
+    }
+
+    div.software-card {
         position: absolute;
         right: -33px;
     }
