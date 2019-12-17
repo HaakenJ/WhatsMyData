@@ -25,4 +25,13 @@ module.exports = function(app) {
       res.json(browserInfo);
     });
   });
+
+  app.get("/api/location", (req, res) => {
+    db.userdata.findAll({
+      attributes: ["country", [db.sequelize.fn("COUNT", db.sequelize.col("country")), "no_country"]],
+      group: ["country"]
+    }).then(countryInfo => {
+      res.json(countryInfo);
+    });
+  });
 };

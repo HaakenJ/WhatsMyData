@@ -140,8 +140,8 @@ $.get("/api/location", (countryData) => {
 
     var options = {};
 
-    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+    var chart = new google.visualization.GeoChart(document.getElementById('regions-chart'));
 
     chart.draw(data, options);
-  }
+  };
 })
