@@ -1,8 +1,11 @@
-// Load the Visualization API and the corechart package.
+// Load the Visualization API, corecharts, and geocharts.
+// Load API key for map chart.
 google.charts.load("current", {
-  packages: ["corechart"]
+  packages: ["corechart", "geochart"],
+  'mapsApiKey': MAPS_KEY
 });
 
+// Request and code to create and display pie chart.
 $.get("/api/devtype", (response) => {
   let chartData = [];
   response.forEach((record) => {
@@ -36,10 +39,15 @@ $.get("/api/devtype", (response) => {
   }
 });
 
+
+// Request and code to create and display column chart.
 $.get("/api/browser", (response) => {
-  
-  let chartData = [['devType', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
-  'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other']],
+
+  let chartData = [
+      ['devType', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
+        'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other'
+      ]
+    ],
     objOfArrays = {};
 
   // Create an array in the proper format for each device type and 
@@ -50,7 +58,7 @@ $.get("/api/browser", (response) => {
     if (!objOfArrays[record.devType]) {
       objOfArrays[record.devType] = [record.devType, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     }
-    
+
     // Depending on what browser is in the record, add that value
     // to the proper location in the array. 
     switch (record.browser) {
@@ -110,4 +118,30 @@ $.get("/api/browser", (response) => {
     chart.draw(data, options);
 
   };
+})
+
+
+
+// Request and code to create and display the world map chart.
+$.get("/api/location", (countryData) => {
+
+  google.charts.setOnLoadCallback(drawRegionsMap);
+
+  let chatData = [["Country", "Popularity"]];
+  countryData.forEach((record) => {
+    let newRow = [record.country, record.no_country];
+    chartData.push(newRow);
+  });
+
+
+
+  function drawRegionsMap() {
+    var data = google.visualization.arrayToDataTable(chartData);
+
+    var options = {};
+
+    var chart = new google.visualization.GeoChart(document.getElementById('regions_div'));
+
+    chart.draw(data, options);
+  }
 })
