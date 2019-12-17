@@ -13,6 +13,7 @@ $.get("/api/devtype", (response) => {
   // Set a callback to run when the Google Visualization API is loaded.
   google.charts.setOnLoadCallback(drawChart);
 
+  console.log(chartData);
   // Callback that creates and populates a data table,
   // instantiates the pie chart, passes in the data and
   // draws it.
@@ -38,7 +39,8 @@ $.get("/api/devtype", (response) => {
 });
 
 $.get("/api/browser", (response) => {
-  let chartData = [],
+  let chartData = [['Browsers', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
+  'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other'],],
     objOfArrays = {};
 
   // Create an array in the proper format for each device type and 
@@ -81,24 +83,16 @@ $.get("/api/browser", (response) => {
     }
   });
 
-  // 
+  // Add the arrays of data to the chartData array.
   for (let i = 0; i < Object.keys(objOfArrays).length; i++) {
-    chartData[i] = objOfArrays[Object.keys(objOfArrays)[i]];
+    chartData[i + 1] = objOfArrays[Object.keys(objOfArrays)[i]];
   };
-
-  console.log(chartData);
 
   google.charts.setOnLoadCallback(drawChart);
 
   function drawChart() {
 
-    var data = google.visualization.arrayToDataTable([
-      ['Browsers', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
-        'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other'], 
-        chartData[0],
-        chartData[1],
-        chartData[2]
-    ]);
+    var data = google.visualization.arrayToDataTable(chartData);
 
     var options = {
       legend: {
@@ -108,7 +102,7 @@ $.get("/api/browser", (response) => {
       bar: {
         groupWidth: '75%'
       },
-      isStacked: true,
+      isStacked: true
     };
 
     // Instantiate and draw our chart, passing in some options.
