@@ -25,10 +25,8 @@ $(document).ready(() => {
       screenHeight = window.screen.height * window.devicePixelRatio,
       screenWidth = window.screen.width * window.devicePixelRatio,
       ipAddress = $("#ip-address").text(),
-      country = "",
-      city = "",
-      latitude = "",
-      longitude = "",
+      country = $("#country").text(),
+      city = $("#city").text(),
       os = parserOS.name,
       osVersion = os.version,
       browser = parserBrowser.name,
@@ -48,9 +46,7 @@ $(document).ready(() => {
       browser: browser,
       browserVersion: browserVersion,
       country: country,
-      city: city,
-      latitude: latitude,
-      longitude: longitude
+      city: city
     };
 
     $("#media-logins li").each(function (index) {
