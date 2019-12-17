@@ -133,10 +133,6 @@ $.get("/api/location", (countryData) => {
     chartData.push(newRow);
   });
 
-  console.log(chartData);
-
-
-
   function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable(chartData);
 

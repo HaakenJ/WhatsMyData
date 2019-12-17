@@ -69,7 +69,6 @@ var socialMediaLogins = function (callback) {
 		// img.referrerPolicy = "no-referrer";
 		img.src = network.url;
 		img.onload = function () {
-			console.log(`Logged into ${network.name}`);
 			callback(network.name);
 		};
 		img.onerror = function () {};

@@ -49,8 +49,6 @@ $(document).ready(() => {
       postData[$(this).text().toLowerCase()] = true;
     });
 
-    console.log(postData);
-
     $.ajax({
       type: "POST",
       url: "/api/userData",
