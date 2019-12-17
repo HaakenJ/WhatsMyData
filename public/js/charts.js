@@ -37,7 +37,7 @@ $.get("/api/devtype", (response) => {
 });
 
 $.get("/api/browser", (response) => {
-  console.log(response);
+  
   let chartData = [['devType', 'Chrome', 'Mobile Safari', 'Firefox', 'Silk',
   'Chrome WebView', 'Edge', 'Internet Explorer', 'Opera', 'Other']],
     objOfArrays = {};
@@ -50,7 +50,7 @@ $.get("/api/browser", (response) => {
     if (!objOfArrays[record.devType]) {
       objOfArrays[record.devType] = [record.devType, 0, 0, 0, 0, 0, 0, 0, 0, 0];
     }
-    console.log(chartData);
+    
     // Depending on what browser is in the record, add that value
     // to the proper location in the array. 
     switch (record.browser) {
