@@ -23,7 +23,6 @@ module.exports = (sequelize, DataTypes) => {
     blogger: DataTypes.BOOLEAN
   }, {});
   Logins.associate = function(models) {
-    // associations can be defined here
     Logins.belongsTo(models.IP);
   };
   return Logins;

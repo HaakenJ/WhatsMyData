@@ -3,9 +3,7 @@ $(document).ready(() => {
         device = parser.getDevice(),
         cpu = parser.getCPU(),
         os = parser.getOS(),
-        browser = parser.getBrowser(),
-        screenHeight = screen.height,
-        screenWidth = screen.width;
+        browser = parser.getBrowser();
 
     if (device.type === undefined) {
         $("#device-type").text("PC");
@@ -20,11 +18,16 @@ $(document).ready(() => {
     $("#cpu").text(cpu.architecture);
     $("#cores").text(navigator.hardwareConcurrency);
     $("#screen-size").text(window.screen.width * window.devicePixelRatio + "x" + window.screen.height * window.devicePixelRatio);
-    
-    navigator.getBattery().then((battery) => {
-        $("#battery-charging").text(battery.charging ? "Yes" : "No");
-        $("#battery-level").text(`${battery.level * 100}%`);
-    });
+
+    try {
+        navigator.getBattery().then((battery) => {
+            $("#battery-charging").text(battery.charging ? "Yes" : "No");
+            $("#battery-level").text(`${battery.level * 100}%`);
+        });
+    }
+    catch {
+        console.log("Battery level not available.");
+    }
 
     $("#op-sys").text(`${os.name} ${os.version}`);
     $("#browser").text(`${browser.name} ${browser.version}`)

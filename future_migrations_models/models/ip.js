@@ -7,7 +7,6 @@ module.exports = (sequelize, DataTypes) => {
     tableName: "IP"
   });
   IP.associate = function(models) {
-    // associations can be defined here
     IP.hasOne(models.Hardware);
     IP.hasOne(models.Locations);
     IP.hasOne(models.Logins);

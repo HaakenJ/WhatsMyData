@@ -22,8 +22,7 @@
             <div class="nav-wrapper">
                 <a href="#!" class="brand-logo header" id="nav-logo">01100100 01100001 01110100 01100001</a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="https://github.com/HaakenJ/Project2"><i
-                        class="fab fa-github"></i></a></li>
+                    <li><a href="https://github.com/HaakenJ/Project2"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
         </nav>
@@ -47,7 +46,7 @@
     <div class="container">
         <!-- Hardware Data -->
         <div class="data-container row">
-            <div class="col s4">
+            <div class="col s12 m4">
                 <div class="card-shadow z-depth-4 left-shadow"></div>
                 <div class="card-content z-depth-4">
                     <div class="card-title header">Your Hardware:</div>
@@ -63,7 +62,7 @@
                     <div class="card-desc">Your Screen Size: <span class="data" id="screen-size"></span></div>
                 </div>
             </div>
-            <div class="col s6 offset-s2 right-side-text">
+            <div class="col m6 offset-m2 right-side-text">
                 <div class="card-about">
                     <div class="card-title header">Is This Dangerous?</div>
                     <p class="explanation">
@@ -80,8 +79,8 @@
 
         <!-- Software Data -->
         <div class="data-container row">
-            <div class="col s6">
-                <div class="card-about">
+            <div class="col m6">
+                <div class="card-about mobile-about">
                     <div class="card-title header">What is this data used for?</div>
                     <p class="explanation">
                         This data is generally nothing to worry about. In fact,
@@ -93,7 +92,7 @@
             </div>
             <div class="col s4 offset-s2">
                 <div class="card-shadow z-depth-4 right-shadow"></div>
-                <div class="card-content z-depth-4" id="software-card">
+                <div class="card-content z-depth-4 software-card">
                     <div class="card-title header">Your Software:</div>
                     <div class="card-desc">Operating System: <span class="data" id="op-sys"></span></div>
                     <div class="card-desc">Browser: <span class="data" id="browser"></span></div>
@@ -111,13 +110,13 @@
                 would like to learn more about user agent strings (and even how you
                 can spoof them!) visit the links below.
                 <div class="row">
-                    <div class="col s4 offset-s1">
+                    <div class="col s12 m4 offset-m1">
                         <a class="btn waves-effect waves-light link-btn" id="user-agent-exp"
                             href="https://blog.malwarebytes.com/security-world/technology/2017/08/explained-user-agent/">
                             Explained: user agent
                         </a>
                     </div>
-                    <div class="col s4 offset-s2">
+                    <div class="col s12 m4 offset-m2">
                         <a class="btn waves-effect waves-light link-btn" id="user-agent-spoof"
                             href="https://www.howtogeek.com/113439/how-to-change-your-browsers-user-agent-without-installing-any-extensions/">
                             Spoof your user agent
@@ -129,7 +128,7 @@
 
         <!-- Social Media Data -->
         <div class="data-container row">
-            <div class="col s4">
+            <div class="col s12 m4">
                 <div class="card-shadow z-depth-4 left-shadow"></div>
                 <div class="card-content z-depth-4">
                     <div class="card-title header">You Are Logged In At:</div>
@@ -138,7 +137,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="col s6 offset-s2 right-side-text">
+            <div class="col s12 m6 offset-m2 right-side-text">
                 <div class="card-about">
                     <div class="card-title header">Does this get used against me?</div>
                     <p class="explanation">
@@ -158,26 +157,26 @@
 
         <!-- Gyroscope Data -->
         <div class="data-container row">
-            <div class="col s6">
-                <div class="card-about">
+            <div class="col s12 m6">
+                <div class="card-about mobile-about">
                     <div class="card-title header">What is this data used for?</div>
                     <p class="explanation">
-                        Sed ut perspiciatis unde omnis iste natus error sit 
-                        voluptatem accusantium doloremque laudantium, totam 
-                        rem aperiam, eaque ipsa quae ab illo inventore 
-                        veritatis et quasi architecto beatae vitae dicta sunt 
-                        explicabo. Nemo enim ipsam voluptatem quia voluptas 
-                        sit aspernatur aut odit aut fugit, sed quia 
-                        consequuntur magni dolores eos qui ratione voluptatem 
-                        sequi nesciunt. 
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo. Nemo enim ipsam voluptatem quia voluptas
+                        sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
                     </p>
                 </div>
             </div>
-            <div class="col s4 offset-s2">
+            <div class="col s12 m4 offset-m2">
                 <div class="card-shadow z-depth-4 right-shadow"></div>
-                <div class="card-content z-depth-4" id="software-card">
+                <div class="card-content z-depth-4 software-card">
                     <div class="card-title header">Your Orientation:</div>
-                    <div class="card-desc">Absolute Reference: 
+                    <div class="card-desc">Absolute Reference:
                         <span class="data" id="isAbsolute"></span>
                     </div>
                     <div class="card-desc">X-Axis: <span class="data" id="x"></span></div>
@@ -187,14 +186,60 @@
             </div>
         </div>
 
+        <!-- IP Address Data -->
+        <div class="data-container row top-margin">
+            <div class="col s12 m6">
+                <div class="card-about mobile-about">
+                    <div class="card-title header">What is this data used for?</div>
+                    <p class="explanation">
+                        Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium, totam
+                        rem aperiam, eaque ipsa quae ab illo inventore
+                        veritatis et quasi architecto beatae vitae dicta sunt
+                        explicabo. Nemo enim ipsam voluptatem quia voluptas
+                        sit aspernatur aut odit aut fugit, sed quia
+                        consequuntur magni dolores eos qui ratione voluptatem
+                        sequi nesciunt.
+                    </p>
+                </div>
+            </div>
+            <div class="col s12 m4 offset-m2">
+                <div class="card-shadow z-depth-4 right-shadow"></div>
+                <div class="card-content z-depth-4 software-card">
+                    <div class="card-title header">Data From Your IP:</div>
+                    <div class="card-desc">IP Address: <span class="data" id="ip-address"></span></div>
+                    <div class="card-desc">City: <span class="data" id="city"></span></div>
+                    <div class="card-desc">Country:<ul class="data lists" id="country"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- First Chart -->
+        <div class="data-container row top-margin">
+            <div class="col s12">
+                <div class="card-shadow z-depth-4 left-shadow chart-shadow"></div>
+                <div class="card-content z-depth-4 chart-card">
+                    <div id="deviceType-chart"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Chart -->
+        <div class="data-container row">
+            <div class="col s12">
+                <div class="card-shadow z-depth-4 left-shadow chart-shadow"></div>
+                <div class="card-content z-depth-4 chart-card">
+                    <div id="browser-chart"></div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
-
-
-
     <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
-        integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"
+        integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
     <!-- ua-parser-js -->
     <script src="https://cdn.jsdelivr.net/npm/ua-parser-js@0/dist/ua-parser.min.js"></script>
     <!-- Materialize -->
@@ -203,12 +248,20 @@
     <script src="https://kit.fontawesome.com/9963e93bef.js" crossorigin="anonymous"></script>
     <!-- Anime.js -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.2.0/anime.min.js"></script>
+    <!-- Google Charts -->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <!-- ua-parser code -->
     <script src="js/ua-parser.js"></script>
     <!-- Social Media Login function -->
     <script src="js/socialmedia.js"></script>
     <!-- Gyroscope function -->
     <script src="js/gyroscope.js"></script>
+    <!-- IP Address Functions -->
+    <script src="js/ipAddress.js"></script>
+    <!-- Charting Functions -->
+    <script src="js/charts.js"></script>
+    <!-- API Functions -->
+    <script src="js/requests.js"></script>
 </body>
 
 </html>

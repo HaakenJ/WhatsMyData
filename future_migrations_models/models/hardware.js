@@ -14,7 +14,6 @@ module.exports = (sequelize, DataTypes) => {
     tableName: "Hardware"
   });
   Hardware.associate = function(models) {
-    // associations can be defined here
     Hardware.belongsTo(models.IP);
   };
   return Hardware;

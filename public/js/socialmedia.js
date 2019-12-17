@@ -84,4 +84,4 @@ function addNetworkToList(name) {
 
 $(document).ready(() => {
 	socialMediaLogins(addNetworkToList);
-});
+})
