@@ -13,6 +13,7 @@ $.get("/api/devtype", (response) => {
   // Set a callback to run when the Google Visualization API is loaded.
   google.charts.setOnLoadCallback(drawChart);
 
+  console.log(chartData);
   // Callback that creates and populates a data table,
   // instantiates the pie chart, passes in the data and
   // draws it.
