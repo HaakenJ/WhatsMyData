@@ -38,6 +38,7 @@ $(document).ready(() => {
         }).then(locationInfo => {
             $("#city").text(locationInfo.city);
             $("#country").text(locationInfo.country_name);
+            $("#country-code").text(locationInfo.country_code2);
         });
     });
 });

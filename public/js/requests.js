@@ -25,12 +25,10 @@ $(document).ready(() => {
       screenHeight = window.screen.height * window.devicePixelRatio,
       screenWidth = window.screen.width * window.devicePixelRatio,
       ipAddress = $("#ip-address").text(),
-      country = $("#country").text(),
+      country = $("#country-code").text(),
       city = $("#city").text(),
       os = parserOS.name,
-      osVersion = os.version,
-      browser = parserBrowser.name,
-      browserVersion = browser.version;
+      browser = parserBrowser.name;
 
     let postData = {
       ipAddress: ipAddress,
@@ -42,9 +40,7 @@ $(document).ready(() => {
       screenHeight: screenHeight,
       screenWidth: screenWidth,
       os: os,
-      osVersion: osVersion,
       browser: browser,
-      browserVersion: browserVersion,
       country: country,
       city: city
     };

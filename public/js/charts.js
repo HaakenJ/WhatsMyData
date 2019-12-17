@@ -127,11 +127,13 @@ $.get("/api/location", (countryData) => {
 
   google.charts.setOnLoadCallback(drawRegionsMap);
 
-  let chatData = [["Country", "Popularity"]];
+  let chartData = [["Country", "Popularity"]];
   countryData.forEach((record) => {
     let newRow = [record.country, record.no_country];
     chartData.push(newRow);
   });
+
+  console.log(chartData);
 
 
 
