@@ -20,12 +20,12 @@ $(document).ready(() => {
     $("#screen-size").text(window.screen.width * window.devicePixelRatio + "x" + window.screen.height * window.devicePixelRatio);
 
     try {
-        navigator.getBattery().then((battery) => {
+        navigator.getBattery().then(battery => {
             $("#battery-charging").text(battery.charging ? "Yes" : "No");
             $("#battery-level").text(`${battery.level * 100}%`);
         });
     }
-    catch {
+    catch(err){
         console.log("Battery level not available.");
     }
 

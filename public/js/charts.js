@@ -108,7 +108,7 @@ $.get("/api/browser", (response) => {
       bar: {
         groupWidth: '75%'
       },
-      isStacked: true,
+      isStacked: true
     };
 
     // Instantiate and draw our chart, passing in some options.
