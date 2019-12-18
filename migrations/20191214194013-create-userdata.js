@@ -44,12 +44,6 @@ module.exports = {
       city: {
         type: Sequelize.STRING
       },
-      latitude: {
-        type: Sequelize.STRING
-      },
-      longitude: {
-        type: Sequelize.STRING
-      },
       square: {
         type: Sequelize.BOOLEAN
       },

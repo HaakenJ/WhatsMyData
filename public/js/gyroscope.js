@@ -16,7 +16,6 @@ $(document).ready(function() {
         $("#y").text(beta);
         $("#z").text(gamma);
       }
-      console.log(absolute, alpha, beta, gamma);
     }
     window.addEventListener("deviceorientation", handleOrientation);
   })();

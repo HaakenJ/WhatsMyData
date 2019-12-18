@@ -20,19 +20,21 @@ $(document).ready(() => {
         model = device.model;
     }
 
+    socialMediaLogins(addNetworkToList);
+
     const cpu = parserCPU.architecture,
       cores = navigator.hardwareConcurrency,
       screenHeight = window.screen.height * window.devicePixelRatio,
       screenWidth = window.screen.width * window.devicePixelRatio,
       ipAddress = $("#ip-address").text(),
+
       country = $("#country").text(),
       city = $("#city").text(),
       latitude = $("#Latitude").text(),
       longitude = $("#Longitude").text(),
+
       os = parserOS.name,
-      osVersion = os.version,
-      browser = parserBrowser.name,
-      browserVersion = browser.version;
+      browser = parserBrowser.name;
 
     let postData = {
       ipAddress: ipAddress,
@@ -44,20 +46,14 @@ $(document).ready(() => {
       screenHeight: screenHeight,
       screenWidth: screenWidth,
       os: os,
-      osVersion: osVersion,
       browser: browser,
-      browserVersion: browserVersion,
       country: country,
-      city: city,
-      latitude: latitude,
-      longitude: longitude
+      city: city
     };
 
     $("#media-logins li").each(function (index) {
       postData[$(this).text().toLowerCase()] = true;
     });
-
-    console.log(postData);
 
     $.ajax({
       type: "POST",
