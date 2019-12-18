@@ -9,4 +9,4 @@ cache:
   directories:
     - node_modules
 before_install:
-  - mysql -e "CREATE DATABASE IF NOT EXISTS testdb;"
+  - mysql -e "CREATE DATABASE IF NOT EXISTS userdata_DB;"
