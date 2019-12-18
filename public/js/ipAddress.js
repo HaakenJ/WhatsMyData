@@ -5,7 +5,7 @@ var country_code2 = sessionStorage.getItem("country_code2");
 if (!ip || !country_name || !country_code2) {
     setAsync(false);
     setFieldsParameter("country_name,country_code2");
-    getGeolocation(handleGeolocationResponse, API_KEY);
+    getGeolocation(handleGeolocationResponse, "93434439bff2436bba87545501a9a061");
 }
 
 function handleGeolocationResponse(json) {
