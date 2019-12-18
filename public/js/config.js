@@ -1,2 +1,0 @@
-const API_KEY = "93434439bff2436bba87545501a9a061";
-const MAPS_KEY = "AIzaSyAitPSJ9G8ootmASKkhrDqESt8Mbs3x_9A";
