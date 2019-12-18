@@ -20,9 +20,27 @@ module.exports = function(app) {
   app.get("/api/browser", (req, res) => {
     db.userdata.findAll({
       attributes: ["devType", "browser", [db.sequelize.fn("COUNT", db.sequelize.col("browser")), "no_browser"]],
+      where: {devType: "PC"},
       group: ["browser"]
-    }).then(browserInfo => {
-      res.json(browserInfo);
+    }).then(pcBrowsers => {
+      db.userdata.findAll({
+        attributes: ["devType", "browser", [db.sequelize.fn("COUNT", db.sequelize.col("browser")), "no_browser"]],
+        where: {devType: "tablet"},
+        group: ["browser"]
+      }).then(tabBrowsers => {
+        db.userdata.findAll({
+          attributes: ["devType", "browser", [db.sequelize.fn("COUNT", db.sequelize.col("browser")), "no_browser"]],
+          where: {devType: "mobile"},
+          group: ["browser"]
+        }).then(mobBrowsers => {
+          let response = {
+            pcBrowsers: pcBrowsers,
+            tabBrowsers: tabBrowsers,
+            mobBrowsers: mobBrowsers
+          };
+          res.json(response);
+        });
+      });
     });
   });
 
