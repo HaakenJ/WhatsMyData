@@ -144,7 +144,11 @@ $.get("/api/location", (countryData) => {
   function drawRegionsMap() {
     var data = google.visualization.arrayToDataTable(chartData);
 
-    var options = {};
+    var options = {
+      colorAxis: {colors: ['#aec4ff', '#a8bfff', '#7095fa', '#4375fc', '#4073ff', '#204dc9', '#062a8d']},
+      datalessRegionColor: '#FFFFFF',
+      defaultColor: '#f5f5f5'
+    };
 
     var chart = new google.visualization.GeoChart(document.getElementById('regions-chart'));
 

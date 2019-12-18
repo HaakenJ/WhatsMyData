@@ -87,6 +87,12 @@ nav {
         margin-top: 200px;
     }
 
+    .chart-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 300px;
+    }
+
     .card-title {
         font-size: 2rem;
         font-weight: 600;
@@ -141,7 +147,7 @@ nav {
     }
 
     div.mobile-about {
-        top: 350px;
+        top: 400px;
     }
 
     #gyro-card {
@@ -184,6 +190,13 @@ nav {
 
     #user-agent-spoof {
         margin-top: 20px;
+    }
+
+    #deviceType-chart,
+    #browser-chart,
+    #regions-chart {
+        width: 250px;
+        height: 200px;
     }
 }
 
@@ -239,6 +252,11 @@ nav {
     .data-container {
         position: relative;
         margin-top: 200px;
+    }
+
+    .chart-container {
+        display: flex;
+        flex-direction: column;
     }
 
     .card-title {
@@ -299,6 +317,10 @@ nav {
     #browser-chart {
         width: 500px;
         height: 400px;
+    }
+
+    #regions-chart {
+
     }
 
     .data-container 

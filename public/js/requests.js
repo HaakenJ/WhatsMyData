@@ -20,6 +20,8 @@ $(document).ready(() => {
         model = device.model;
     }
 
+    socialMediaLogins(addNetworkToList);
+
     const cpu = parserCPU.architecture,
       cores = navigator.hardwareConcurrency,
       screenHeight = window.screen.height * window.devicePixelRatio,
