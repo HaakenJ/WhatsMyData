@@ -29,8 +29,7 @@ $(document).ready(() => {
       ipAddress = $("#ip-address").text(),
       country = $("#country").text(),
       city = $("#city").text(),
-      latitude = $("#Latitude").text(),
-      longitude = $("#Longitude").text(),
+
 
       os = parserOS.name,
       browser = parserBrowser.name;

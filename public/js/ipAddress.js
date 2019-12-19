@@ -1,6 +1,3 @@
-var ip = sessionStorage.getItem("ip");
-var country_name = sessionStorage.getItem("country_name");
-var city = sessionStorage.getItem("ccity");
 
 
     var ip = sessionStorage.getItem("ip");

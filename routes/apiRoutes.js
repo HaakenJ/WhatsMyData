@@ -52,4 +52,9 @@ module.exports = function(app) {
       res.json(countryInfo);
     });
   });
+
+  app.get("/api/mapKey", (req, res) => {
+    const key = process.env.MAPS_KEY;
+    res.json(key);
+  })
 };
