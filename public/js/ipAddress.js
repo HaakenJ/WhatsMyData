@@ -29,12 +29,7 @@ var city = sessionStorage.getItem("ccity");
         sessionStorage.setItem("longitude", longitude);
     }
 
-    
-    console.log(country_name);
-    console.log(city);
-    console.log(ip); 
-    console.log(latitude);
-    console.log(longitude);
+
     $(document).ready(function() {
         $("#ip-address").text(ip);
         $("#city").text(city);

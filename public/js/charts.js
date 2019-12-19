@@ -21,7 +21,7 @@ $.get("/api/devtype", (response) => {
     data.addColumn("string", "Device-Type");
     data.addColumn("number", "NumberOfUsers");
     data.addRows(chartData);
-
+  
     // Set chart options
     var options = {
       title: "What Devices Our Users Have",

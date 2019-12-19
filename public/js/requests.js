@@ -27,7 +27,6 @@ $(document).ready(() => {
       screenHeight = window.screen.height * window.devicePixelRatio,
       screenWidth = window.screen.width * window.devicePixelRatio,
       ipAddress = $("#ip-address").text(),
-
       country = $("#country").text(),
       city = $("#city").text(),
       latitude = $("#Latitude").text(),
