@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "kramer",
+    "password": "KiraIdo12@!",
     "database": "userdata_DB",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "kramer",
+    "password": "KiraIdo12@!",
     "database": "userdata_DB",
     "host": "localhost",
     "dialect": "mysql",
