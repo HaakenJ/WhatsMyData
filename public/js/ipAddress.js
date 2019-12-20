@@ -7,15 +7,9 @@ var country_code2 = sessionStorage.getItem("country_code2");
 var latitude = sessionStorage.getItem("latitude");
 var longitude = sessionStorage.getItem("longitude");
 
-<<<<<<< HEAD
 if (!ip || !country_name || !country_code2 || !latitude || !longitude) {
   setAsync(false);
   setFieldsParameter("country_name,country_code2,latitude,longitude");
-=======
-if (!ip || !country_name || !city || !latitude || !longitude) {
-  setAsync(false);
-  setFieldsParameter("country_name,city,latitude,longitude,country_code2");
->>>>>>> 7ae73196b45880407c13852e0bdcdc810e37fc84
   getGeolocation(handleGeolocationResponse, "93434439bff2436bba87545501a9a061");
 }
 
@@ -46,10 +40,6 @@ $(document).ready(function() {
   $("#latitude").text(latitude);
   $("#longitude").text(longitude);
   $("#country-code").text(country_code2);
-<<<<<<< HEAD
   $("#latitude").text(latitude);
   $("#longitude").text(longitude);
 });
-=======
-});
->>>>>>> 7ae73196b45880407c13852e0bdcdc810e37fc84
