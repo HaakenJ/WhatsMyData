@@ -27,8 +27,10 @@ $(document).ready(() => {
       screenHeight = window.screen.height * window.devicePixelRatio,
       screenWidth = window.screen.width * window.devicePixelRatio,
       ipAddress = $("#ip-address").text(),
-      country = $("#country-code").text(),
+      country = $("#country").text(),
       city = $("#city").text(),
+
+
       os = parserOS.name,
       browser = parserBrowser.name;
 
