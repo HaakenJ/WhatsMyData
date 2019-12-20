@@ -20,7 +20,9 @@ function createSeeds(numOfRecords) {
             screenHeight = [1920, 1334, 1440, 800, 1136, 2048, 1024, 720][randomIndex(8)],
             screenWidth = [1080, 750, 2960, 480, 640, 2732, 768, 1440][randomIndex(8)],
             os = ["Windows", "iOS", "Android", "Linux"][randomIndex(4)],
-            browser = ["Chrome", "Firefox", "Silk", "Mobile Safari", "Chrome WebView", "Internet Explorer", "Edge", "Opera"][randomIndex(8)],
+            browser = ["Chrome", "Firefox", "Mobile Safari", "Opera"][randomIndex(8)],
+            // Took out less common browsers to make data seem more logical.
+            // "Chrome WebView", "Internet Explorer", "Edge", "Silk",
             country = countryList[randomIndex(countryList.length + 1)];
 
         let postData = {
